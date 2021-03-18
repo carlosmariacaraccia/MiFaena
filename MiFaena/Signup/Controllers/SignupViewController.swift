@@ -1,18 +1,20 @@
 //
-//  ViewController.swift
+//  SignupViewController.swift
 //  MiFaena
 //
-//  Created by Carlos Caraccia on 3/16/21.
+//  Created by Carlos Caraccia on 3/18/21.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .white
-    }
-}
 
+        // Do any additional setup after loading the view.
+    }
+    
+
+
+}
