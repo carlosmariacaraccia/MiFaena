@@ -193,28 +193,6 @@ class SignupViewController: UIViewController {
         
         signupPresenter?.processUserSignup(formModel: signupFormModel)
         
-        
-        
-        //        AuthService.shared.registerUser(credentials: credentials) { (error, dbref) in
-        //            if let unwrappedError = error {
-        //                spinnerController.willMove(toParent: nil)
-        //                spinnerController.view.removeFromSuperview()
-        //                spinnerController.removeFromParent()
-        //                let alert = Utilities.createAlertController(forErrorMessage: unwrappedError)
-        //                self.present(alert, animated: true)
-        //
-        //            } else {
-        //                DispatchQueue.main.async {
-        //                    spinnerController.willMove(toParent: nil)
-        //                    spinnerController.view.removeFromSuperview()
-        //                    spinnerController.removeFromParent()
-        //                    guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
-        //                    guard let tab = window.rootViewController as? MainTabController else { return }
-        //                    tab.authenticateAndConfigureUI()
-        //                    self.dismiss(animated: true, completion: nil)
-        //                }
-        //            }
-        //        }
     }
 }
 
@@ -247,27 +225,39 @@ extension SignupViewController: SignupViewDelegateProtocol {
 
     }
     
-    func errorHandler(error: Error) {
-        // TODO: Handle Error
-        // Stop spinner from spinning and remove it from the view
+    /// Creates a custom alert controller
+    /// - Parameters:
+    ///   - title: the title of the alert controller
+    ///   - message: the message of the alert controller
+    ///   - accessibilityIdent: the accessibility identifier that the alert controller has, useful for uitests
+    /// - Returns: the desired uialertcontroller
+    private func createAlertControllerWithMessage(title:String, message:String, accessibilityIdent:String) -> UIAlertController {
         
-        // Present an alert dialog showing the problems encountered during the signup procedure
         let alertController = UIAlertController()
-        alertController.title = "Error"
-        alertController.message = error.localizedDescription
+        alertController.title = title
+        alertController.message = message
         let action = UIAlertAction(title: "OK", style: .default)
         alertController.addAction(action)
+        alertController.view.accessibilityIdentifier = accessibilityIdent
+        return alertController
+        
+    }
+    
+    func errorHandler(error: Error) {
+        // Stop spinner from spinning and remove it from the view
+        // Present an alert dialog showing the problems encountered during the signup procedure
+        let alertController = createAlertControllerWithMessage(title: "Error", message: error.localizedDescription, accessibilityIdent: "signupErrorAlertDialog")
         //We are in a background queue so we have to go to the main thread
         DispatchQueue.main.async {
-            alertController.view.accessibilityIdentifier = "signupErrorAlertDialog"
             self.present(alertController, animated: true) {
-                // reset all the sign up ui elements
                 
                 if self.spinnerController != nil {
                     self.spinnerController!.willMove(toParent: nil)
                     self.spinnerController!.view.removeFromSuperview()
                     self.spinnerController!.removeFromParent()
                 }
+                
+                // return the form to its initial state
                 let image = #imageLiteral(resourceName: "meatTradeAddPhoto").withRenderingMode(.alwaysTemplate)
                 self.addImageImageView.image = image
                 self.addImageImageView.tintColor = .meatTradeRed
@@ -279,8 +269,4 @@ extension SignupViewController: SignupViewDelegateProtocol {
             }
         }
     }
-    
-    
-    
-    
 }
