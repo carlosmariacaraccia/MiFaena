@@ -14,6 +14,6 @@ protocol SignupModelValidatorProtocol {
     func isPasswordValid(password:String?) -> Bool
     func isUserNameValid(userName:String?) -> Bool
     func isFullNameValid(fullName:String?) -> Bool
-    func isProfileImageValid(profileImage:UIImage?) -> Bool
+    func isProfileImageValid(profileImageData:Data?) -> Bool
     
 }

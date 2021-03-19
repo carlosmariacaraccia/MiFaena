@@ -13,6 +13,6 @@ struct SignupFormModel: Encodable {
     let password:String
     let userName:String
     let fullName:String
-    let profileImageData:Data
+    let profileImageData:Data?
     
 }

@@ -26,7 +26,7 @@ class SignupFormModelValidator:SignupModelValidatorProtocol {
         return fullName != nil
     }
     
-    func isProfileImageValid(profileImage:UIImage?) -> Bool {
-        return profileImage != nil
+    func isProfileImageValid(profileImageData:Data?) -> Bool {
+        return profileImageData != nil
     }
 }

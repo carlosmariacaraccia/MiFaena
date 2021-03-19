@@ -15,7 +15,7 @@ class SignupWebService:SignupWebServiceProtocol {
         Auth.auth().createUser(withEmail: formModel.email, password: formModel.password) { (authDataResult, createUserError) in
             if let authResult = authDataResult {
                 let fileName = UUID().uuidString
-                STORAGE_PROFILE_IMAGES.child(fileName).putData(formModel.profileImageData, metadata: nil) { _ , storageError in
+                STORAGE_PROFILE_IMAGES.child(fileName).putData(formModel.profileImageData!, metadata: nil) { _ , storageError in
                     if storageError == nil {
                         STORAGE_PROFILE_IMAGES.child(fileName).downloadURL { (url, urlError) in
                             if let profileImageUrlString = url?.absoluteString {

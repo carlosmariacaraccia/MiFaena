@@ -39,7 +39,7 @@ class MockSignupModelValidator:SignupModelValidatorProtocol {
         return isFullNameValid
     }
     
-    func isProfileImageValid(profileImage: UIImage?) -> Bool {
+    func isProfileImageValid(profileImageData: Data?) -> Bool {
         isProfileImageValid = true
         return isProfileImageValid
     }
