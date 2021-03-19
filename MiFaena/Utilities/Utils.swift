@@ -9,6 +9,25 @@ import UIKit
 
 class Utilities {
     
+    /// Creates a custom alert controller
+    /// - Parameters:
+    ///   - title: the title of the alert controller
+    ///   - message: the message of the alert controller
+    ///   - accessibilityIdent: the accessibility identifier that the alert controller has, useful for uitests
+    /// - Returns: the desired uialertcontroller
+   static func createAlertControllerWithMessage(title:String, message:String, accessibilityIdent:String) -> UIAlertController {
+        
+        let alertController = UIAlertController()
+        alertController.title = title
+        alertController.message = message
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(action)
+        alertController.view.accessibilityIdentifier = accessibilityIdent
+        return alertController
+        
+    }
+
+    
     static func createAlertController(forErrorMessage error: Error) -> UIAlertController {
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Action", style: .default, handler: nil)

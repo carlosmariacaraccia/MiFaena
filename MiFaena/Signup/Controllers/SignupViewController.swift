@@ -82,6 +82,7 @@ class SignupViewController: UIViewController {
     }()
     
     lazy var registerButton:UIButton = {
+        
         let button = UIButton(type: .system)
         button.setTitle("Register", for: .normal)
         button.setTitleColor(.meatTradeRed, for: .normal)
@@ -122,6 +123,26 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        configureUI()
+        
+        // added image picker delegate
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
+        // injectSignupPresenter
+        if signupPresenter == nil {
+            
+            let signupFormModelValidator = SignupFormModelValidator()
+            let signupWebService = SignupWebService()
+            
+            signupPresenter = SignupPresenter(signupModelValidator: signupFormModelValidator, webService: signupWebService, viewDelegate: self)
+        }
+        
+    }
+    
+    
+    func configureUI() {
+        
         view.addSubview(addImageImageView)
         addImageImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
         addImageImageView.anchor(width:150, height: 150)
@@ -138,20 +159,7 @@ class SignupViewController: UIViewController {
         view.addSubview(bottomContainerView)
         bottomContainerView.centerX(inView: view)
         bottomContainerView.anchor(bottom: view.bottomAnchor, paddingBottom: 50, height: 55)
-        
-        // added image picker delegate
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = true
-        
-        // injectSignupPresenter
-        if signupPresenter == nil {
-            
-            let signupFormModelValidator = SignupFormModelValidator()
-            let signupWebService = SignupWebService()
-            
-            signupPresenter = SignupPresenter(signupModelValidator: signupFormModelValidator, webService: signupWebService, viewDelegate: self)
-        }
-        
+
     }
     
     
@@ -177,22 +185,17 @@ class SignupViewController: UIViewController {
     
     @objc func handleRegistration() {
         
-        // signup form parameters
         let email = secureTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         let userName = userNameTextField.text ?? ""
         let fullName = fullNameTextField.text ?? ""
         let imageData = profileImage?.jpegData(compressionQuality: 0.3)
-        
-        print(profileImage != nil ? "Not nil profile image" : "Nil profile image")
-        
+                
         let signupFormModel = SignupFormModel(email: email, password: password, userName: userName,
                                               fullName: fullName, profileImageData: imageData)
         
         makeSpinnerBegginSpinning()
-        
         signupPresenter?.processUserSignup(formModel: signupFormModel)
-        
     }
 }
 
@@ -221,32 +224,18 @@ extension SignupViewController: UIImagePickerControllerDelegate, UINavigationCon
 extension SignupViewController: SignupViewDelegateProtocol {
     func successfulSignup() {
         // TODO: Handle success
-        print("DEBUG: Successful signup.")
-
+        if self.spinnerController != nil {
+            self.spinnerController!.willMove(toParent: nil)
+            self.spinnerController!.view.removeFromSuperview()
+            self.spinnerController!.removeFromParent()
+        }
     }
     
-    /// Creates a custom alert controller
-    /// - Parameters:
-    ///   - title: the title of the alert controller
-    ///   - message: the message of the alert controller
-    ///   - accessibilityIdent: the accessibility identifier that the alert controller has, useful for uitests
-    /// - Returns: the desired uialertcontroller
-    private func createAlertControllerWithMessage(title:String, message:String, accessibilityIdent:String) -> UIAlertController {
-        
-        let alertController = UIAlertController()
-        alertController.title = title
-        alertController.message = message
-        let action = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(action)
-        alertController.view.accessibilityIdentifier = accessibilityIdent
-        return alertController
-        
-    }
     
     func errorHandler(error: Error) {
         // Stop spinner from spinning and remove it from the view
         // Present an alert dialog showing the problems encountered during the signup procedure
-        let alertController = createAlertControllerWithMessage(title: "Error", message: error.localizedDescription, accessibilityIdent: "signupErrorAlertDialog")
+        let alertController = Utilities.createAlertControllerWithMessage(title: "Error", message: error.localizedDescription, accessibilityIdent: "signupErrorAlertDialog")
         //We are in a background queue so we have to go to the main thread
         DispatchQueue.main.async {
             self.present(alertController, animated: true) {
