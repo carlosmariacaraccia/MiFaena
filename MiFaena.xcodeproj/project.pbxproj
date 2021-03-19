@@ -41,6 +41,12 @@
 		1FE280A02604F17200005970 /* SigninWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE2809F2604F17200005970 /* SigninWebService.swift */; };
 		1FE280A52604F24A00005970 /* SigninFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280A42604F24A00005970 /* SigninFormModel.swift */; };
 		1FE280AA2604F60F00005970 /* SigninError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280A92604F60F00005970 /* SigninError.swift */; };
+		1FE280B22605065000005970 /* SigninPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280B12605065000005970 /* SigninPresenterTests.swift */; };
+		1FE280B8260507D800005970 /* SigninPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280B7260507D800005970 /* SigninPresenter.swift */; };
+		1FE280BD2605169E00005970 /* MockSigninWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280BC2605169E00005970 /* MockSigninWebService.swift */; };
+		1FE280C2260517F000005970 /* SigninWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280C1260517F000005970 /* SigninWebServiceProtocol.swift */; };
+		1FE280C726051E9100005970 /* MockSigninViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280C626051E9100005970 /* MockSigninViewDelegate.swift */; };
+		1FE280CC26051F9900005970 /* SigninViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280CB26051F9900005970 /* SigninViewDelegateProtocol.swift */; };
 		1FEA60992602151D00654538 /* SignupWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA60982602151D00654538 /* SignupWebService.swift */; };
 		1FEA609E2602191B00654538 /* SignupFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA609D2602191B00654538 /* SignupFormModel.swift */; };
 		A05E7A46EDA79DE6BD20AAAE /* Pods_MiFaena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C54B13E86D08378DD70627 /* Pods_MiFaena.framework */; };
@@ -107,6 +113,12 @@
 		1FE2809F2604F17200005970 /* SigninWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWebService.swift; sourceTree = "<group>"; };
 		1FE280A42604F24A00005970 /* SigninFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninFormModel.swift; sourceTree = "<group>"; };
 		1FE280A92604F60F00005970 /* SigninError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninError.swift; sourceTree = "<group>"; };
+		1FE280B12605065000005970 /* SigninPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninPresenterTests.swift; sourceTree = "<group>"; };
+		1FE280B7260507D800005970 /* SigninPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninPresenter.swift; sourceTree = "<group>"; };
+		1FE280BC2605169E00005970 /* MockSigninWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSigninWebService.swift; sourceTree = "<group>"; };
+		1FE280C1260517F000005970 /* SigninWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninWebServiceProtocol.swift; sourceTree = "<group>"; };
+		1FE280C626051E9100005970 /* MockSigninViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSigninViewDelegate.swift; sourceTree = "<group>"; };
+		1FE280CB26051F9900005970 /* SigninViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewDelegateProtocol.swift; sourceTree = "<group>"; };
 		1FEA60982602151D00654538 /* SignupWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebService.swift; sourceTree = "<group>"; };
 		1FEA609D2602191B00654538 /* SignupFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModel.swift; sourceTree = "<group>"; };
 		260C27259012D7A7C73EBC8E /* Pods-MiFaena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiFaena.debug.xcconfig"; path = "Target Support Files/Pods-MiFaena/Pods-MiFaena.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				1FE280942604EE9D00005970 /* MockSigninModelValidator.swift */,
+				1FE280C626051E9100005970 /* MockSigninViewDelegate.swift */,
+				1FE280BC2605169E00005970 /* MockSigninWebService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -238,6 +252,7 @@
 		1FC08B562604DBDE00631263 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				1FE280B12605065000005970 /* SigninPresenterTests.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -317,6 +332,7 @@
 		1FE280872604E0AE00005970 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
+				1FE280B6260507BF00005970 /* Presenters */,
 				1FE2809E2604F15C00005970 /* Network */,
 				1FE2808E2604E4F200005970 /* Protocols */,
 				1FE280882604E0D100005970 /* Models */,
@@ -338,6 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				1FE2808F2604E50D00005970 /* SigninFormModelValidatorProtocol.swift */,
+				1FE280CB26051F9900005970 /* SigninViewDelegateProtocol.swift */,
+				1FE280C1260517F000005970 /* SigninWebServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -348,6 +366,14 @@
 				1FE2809F2604F17200005970 /* SigninWebService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		1FE280B6260507BF00005970 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				1FE280B7260507D800005970 /* SigninPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		1FEA60A526021F8900654538 /* Signup */ = {
@@ -703,9 +729,12 @@
 				1F54F7CB260395CE005DC60D /* ActivityIndicator.swift in Sources */,
 				1FE280902604E50D00005970 /* SigninFormModelValidatorProtocol.swift in Sources */,
 				1FE280A02604F17200005970 /* SigninWebService.swift in Sources */,
+				1FE280B8260507D800005970 /* SigninPresenter.swift in Sources */,
 				1FE2808A2604E11500005970 /* SigninFormModelValidator.swift in Sources */,
 				1FCECF412601387300C06370 /* AppDelegate.swift in Sources */,
 				1F6786D0260298E800662A18 /* SignupModelValidatorProtocol.swift in Sources */,
+				1FE280CC26051F9900005970 /* SigninViewDelegateProtocol.swift in Sources */,
+				1FE280C2260517F000005970 /* SigninWebServiceProtocol.swift in Sources */,
 				1F6786B626028D9600662A18 /* GlobalConstants.swift in Sources */,
 				1F45443F2603B0B800CD05D7 /* SignupViewController.swift in Sources */,
 				1F54F7CC260395CE005DC60D /* Extensions.swift in Sources */,
@@ -722,6 +751,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FE2809A2604F0B200005970 /* SigninWebServiceTests.swift in Sources */,
+				1FE280B22605065000005970 /* SigninPresenterTests.swift in Sources */,
+				1FE280BD2605169E00005970 /* MockSigninWebService.swift in Sources */,
 				1F6786862602489A00662A18 /* MockSignupWebService.swift in Sources */,
 				1FE280952604EE9D00005970 /* MockSigninModelValidator.swift in Sources */,
 				1F54F7D72603AE62005DC60D /* SignupViewControllerTests.swift in Sources */,
@@ -731,6 +762,7 @@
 				1F6786C62602947800662A18 /* MockSignupModelValidator.swift in Sources */,
 				1F85A54B2603EA5000307245 /* MockSignupPresenter.swift in Sources */,
 				1F85A53B2603B57100307245 /* SignupFirebaseTests.swift in Sources */,
+				1FE280C726051E9100005970 /* MockSigninViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

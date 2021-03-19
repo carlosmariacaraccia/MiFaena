@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-class SigninWebService {
+class SigninWebService:SigninWebServiceProtocol {
     
     func signin(withFormModel formModel:SigninFormModel, completionHandler:@escaping(Result<Void,Error>)->()) {
         Auth.auth().signIn(withEmail: formModel.email, password: formModel.password) { (result, error) in
