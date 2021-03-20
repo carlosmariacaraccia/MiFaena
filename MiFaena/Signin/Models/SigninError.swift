@@ -14,5 +14,16 @@ enum SigninError:LocalizedError, Equatable {
     case emptyPassword(description: String)
     case invalidRequest(description: String)
     
+    
+    var errorDescription: String? {
+        switch self {
+        case .emptyEmail(let description):
+            return description
+        case .emptyPassword(let password):
+            return password
+        case .invalidRequest( let request):
+            return request
+        }
+    }
 }
 

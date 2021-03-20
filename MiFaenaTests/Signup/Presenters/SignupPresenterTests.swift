@@ -25,7 +25,7 @@ class SignupPresenterTests: XCTestCase {
         bundle = Bundle.init(for: SignupPresenterTests.self)
         image = UIImage(named: "genericImage.jpeg", in: bundle, with: nil)
         data = image!.jpegData(compressionQuality: 0.3)
-        signupFormModel = SignupFormModel(email:"testing@test.com", password:"asldkjfal;sjdasdf", userName:"Tincho",
+        signupFormModel = SignupFormModel(email:"clering@test.com", password:"asldkjfal;sjdasdf", userName:"Tincho",
                                           fullName: "Martin Camo", profileImageData:data!)
         mockSignupWebService = MockSignupWebService()
         mockSignupViewDelegate = MockSignupViewDelegate()

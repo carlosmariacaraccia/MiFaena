@@ -22,7 +22,7 @@ class SignupFirebaseTests: XCTestCase {
         bundle = Bundle.init(for: SignupFirebaseTests.self)
         image = UIImage(named: "genericImage.jpeg", in: bundle, with: nil)
         data = image!.jpegData(compressionQuality: 0.3)
-        signupFormModel = SignupFormModel(email:"clarin@test.com", password:"asldkjfal;sjdasdf", userName:"Tincho", fullName: "Martin Camo", profileImageData:data!)
+        signupFormModel = SignupFormModel(email:"Damian@test.com", password:"asldkjfal;sjdasdf", userName:"Tincho", fullName: "Martin Camo", profileImageData:data!)
     
     }
 

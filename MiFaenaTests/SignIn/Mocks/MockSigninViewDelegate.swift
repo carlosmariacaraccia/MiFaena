@@ -18,7 +18,7 @@ class MockSigninViewDelegate:SigninViewDelegateProtocol {
         expectation?.fulfill()
     }
     
-    func errorHandler(error: SigninError) {
+    func errorHandler(error: Error) {
         
     }
 

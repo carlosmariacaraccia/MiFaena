@@ -11,12 +11,26 @@ import Foundation
 class SigninFormModelValidator: SigninFormModelValidatorProtocol {
     
     func isEmailValid(email:String?) -> Bool {
-        return email != nil
+        if let email = email {
+            if email != "" && email != "Email" {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
     }
     
     func isPasswordValid(password:String?) -> Bool {
-        return password != nil
+        if let password = password {
+            if password != "" && password != "Email" {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
     }
-    
-    
 }

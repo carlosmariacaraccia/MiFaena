@@ -8,13 +8,13 @@
 import Foundation
 
 
-class SigninPresenter {
+class SigninPresenter:SigninPresenterProtocol {
     
     private let signinFormModelValidator:SigninFormModelValidatorProtocol
     private let signinWebService:SigninWebServiceProtocol
     private let signinViewDelegate:SigninViewDelegateProtocol
     
-    init(signinFormModelValidator:SigninFormModelValidatorProtocol, signinWebService:SigninWebServiceProtocol, signinViewDelegate:SigninViewDelegateProtocol) {
+   required init(signinFormModelValidator:SigninFormModelValidatorProtocol, signinWebService:SigninWebServiceProtocol, signinViewDelegate:SigninViewDelegateProtocol) {
         self.signinFormModelValidator = signinFormModelValidator
         self.signinWebService = signinWebService
         self.signinViewDelegate = signinViewDelegate
@@ -25,12 +25,13 @@ class SigninPresenter {
         if !signinFormModelValidator.isEmailValid(email: formModel.email) {
             let error = SigninError.emptyEmail(description: "Email is empty")
             self.signinViewDelegate.errorHandler(error: error)
+            return
         }
         
         if !signinFormModelValidator.isPasswordValid(password: formModel.password) {
             let error = SigninError.emptyPassword(description: "Password is empty")
             self.signinViewDelegate.errorHandler(error: error)
-
+            return
         }
         
         signinWebService.signin(withFormModel: formModel) {[weak self] (result) in
@@ -38,8 +39,7 @@ class SigninPresenter {
             case .success(()):
                 self?.signinViewDelegate.successfulSignin()
             case .failure(let error):
-                let signinError = SigninError.invalidRequest(description: error.localizedDescription)
-                self?.signinViewDelegate.errorHandler(error: signinError)
+                self?.signinViewDelegate.errorHandler(error: error)
             }
         }
     }

@@ -10,6 +10,6 @@ import Foundation
 protocol SigninViewDelegateProtocol:AnyObject {
     
     func successfulSignin()
-    func errorHandler(error: SigninError)
+    func errorHandler(error: Error)
     
 }
