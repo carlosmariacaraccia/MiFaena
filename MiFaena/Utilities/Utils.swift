@@ -28,13 +28,11 @@ class Utilities {
     }
 
     
-    static func createAlertController(forErrorMessage error: Error) -> UIAlertController {
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Action", style: .default, handler: nil)
-        alert.addAction(okAction)
-        return alert
-    }
-    
+    /// Function that creates a textfield with a divider and places a small image in front of the text field
+    /// - Parameters:
+    ///   - imageView: the image view that will be placed in front of the text field
+    ///   - textfield: the text field that will register the input
+    /// - Returns: the resulting uivew
     static func inputContainerView(withImageView imageView:UIImageView, textfield: UITextField) -> UIView {
         
         let view = UIView()
