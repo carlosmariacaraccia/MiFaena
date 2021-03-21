@@ -23,7 +23,9 @@ class MainTabPresenterTests: XCTestCase {
         // Given
         
         let mockMainTabValidator = MockMainTabValidator()
-        let sut = MainTabPresenter(mainTabValidator: mockMainTabValidator)
+        let mockMainTabWebService = MockMainTabWebService()
+        let mockDelegate = MockMainTabViewDelegate()
+        let sut = MainTabPresenter(mainTabValidator: mockMainTabValidator, mainTabWebService: mockMainTabWebService, delegate: mockDelegate)
         
         // When
         sut.processIsUserSignedIn()
@@ -33,7 +35,35 @@ class MainTabPresenterTests: XCTestCase {
         
     }
     
+    func testMainTabPresenter_WhenGivenASignedInUserId_ShouldCallFetchUserMethod() {
+        
+        let mockMainTabValidator = MockMainTabValidator()
+        let mockMainTabWebService = MockMainTabWebService()
+        let mockDelegate = MockMainTabViewDelegate()
+        let sut = MainTabPresenter(mainTabValidator: mockMainTabValidator, mainTabWebService: mockMainTabWebService, delegate: mockDelegate)
+        
+        // When
+        sut.processIsUserSignedIn()
+        
+        // Then
+        XCTAssertTrue(mockMainTabWebService.isFetchUserCalled, "The user was supposed to be logged in, but it was not.")
+
+    }
     
-
-
+    func testMainTabPresenter_WhenTheUserWasFetchedCorrectly_PassesTheUserOnAViewDelegateMethod() {
+        
+        // Given
+        let newExpectation = expectation(description: "Pass the user on a delegate method(). ")
+        let mockMainTabViewDelegate = MockMainTabViewDelegate()
+        let mockMainTabValidator = MockMainTabValidator()
+        let mockMainTabWebService = MockMainTabWebService()
+        let sut = MainTabPresenter(mainTabValidator: mockMainTabValidator, mainTabWebService: mockMainTabWebService, delegate: mockMainTabViewDelegate)
+        mockMainTabViewDelegate.expectation = newExpectation
+        sut.processIsUserSignedIn()
+        
+        // When
+        self.wait(for: [newExpectation], timeout: 4)
+        
+    }
+    
 }

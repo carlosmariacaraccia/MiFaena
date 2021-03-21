@@ -1,5 +1,5 @@
 //
-//  MainTabControllerWebService.swift
+//  MainTabWebService.swift
 //  MiFaena
 //
 //  Created by Carlos Caraccia on 3/20/21.
@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-class MainTabControllerWebService {
+class MainTabWebService:MainTabWebServiceProtocol {
     
     func fetchUser(withId uid:String, completionHandler:@escaping(User?)->()) {
         REF_USERS.child(uid).observeSingleEvent(of: .value) { (snapshot) in

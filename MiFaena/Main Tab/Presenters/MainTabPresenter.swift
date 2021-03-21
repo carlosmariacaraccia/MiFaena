@@ -10,9 +10,13 @@ import Foundation
 class MainTabPresenter {
     
     private var mainTabValidator:MainTabValidatorProtocol
+    private var mainTabWebServie:MainTabWebServiceProtocol
+    private weak var delegate:MainTabViewDelegateProtocol?
     
-    init(mainTabValidator:MainTabValidatorProtocol) {
+    init(mainTabValidator:MainTabValidatorProtocol, mainTabWebService:MainTabWebServiceProtocol, delegate:MainTabViewDelegateProtocol) {
         self.mainTabValidator = mainTabValidator
+        self.mainTabWebServie = mainTabWebService
+        self.delegate = delegate
     }
     
     func processIsUserSignedIn() {
@@ -21,5 +25,12 @@ class MainTabPresenter {
             return
         }
         
+        mainTabWebServie.fetchUser(withId: mainTabValidator.isUserSignedIn()!) { [weak self] (user) in
+            if let user = user {
+                self?.delegate?.successfulUserSignedIn(user: user)
+            } else {
+                self?.delegate?.unsuccessfulUserSignedIn()
+            }
+        }
     }
 }

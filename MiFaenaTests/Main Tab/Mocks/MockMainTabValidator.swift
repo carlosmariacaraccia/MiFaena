@@ -14,7 +14,7 @@ class MockMainTabValidator:MainTabValidatorProtocol {
     
     func isUserSignedIn() -> String? {
         userIsLoggedIn = true
-        return nil
+        return "61eucxcF6HaylMBStyhwqAF8Sah1"
     }
     
     

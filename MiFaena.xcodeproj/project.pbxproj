@@ -12,8 +12,8 @@
 		1F2C09832607434E000E690E /* MainTabPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C09822607434E000E690E /* MainTabPresenterTests.swift */; };
 		1F2C098B2607465C000E690E /* MockMainTabValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C098A2607465C000E690E /* MockMainTabValidator.swift */; };
 		1F2C09932607492B000E690E /* MainTabValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C09922607492B000E690E /* MainTabValidatorProtocol.swift */; };
-		1F3D97592606208700D65153 /* MainTabControllerWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D97582606208700D65153 /* MainTabControllerWebServiceTests.swift */; };
-		1F3D97642606216400D65153 /* MainTabControllerWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D97632606216400D65153 /* MainTabControllerWebService.swift */; };
+		1F3D97592606208700D65153 /* MainTabWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D97582606208700D65153 /* MainTabWebServiceTests.swift */; };
+		1F3D97642606216400D65153 /* MainTabWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D97632606216400D65153 /* MainTabWebService.swift */; };
 		1F3D976A260623BD00D65153 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D9769260623BD00D65153 /* User.swift */; };
 		1F3D9770260631A400D65153 /* MainTabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D976F260631A400D65153 /* MainTabPresenter.swift */; };
 		1F45443F2603B0B800CD05D7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45443E2603B0B800CD05D7 /* SignupViewController.swift */; };
@@ -36,6 +36,10 @@
 		1F85A5462603E9AA00307245 /* SignupPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A5452603E9AA00307245 /* SignupPresenterProtocol.swift */; };
 		1F85A54B2603EA5000307245 /* MockSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A54A2603EA5000307245 /* MockSignupPresenter.swift */; };
 		1F85A5532604AFA700307245 /* SignupError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A5522604AFA700307245 /* SignupError.swift */; };
+		1F9599AF2607505B00C02B2C /* MockMainTabWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599AE2607505B00C02B2C /* MockMainTabWebService.swift */; };
+		1F9599B42607512D00C02B2C /* MainTabWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599B32607512D00C02B2C /* MainTabWebServiceProtocol.swift */; };
+		1F9599B926075C6400C02B2C /* MockMainTabViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599B826075C6400C02B2C /* MockMainTabViewDelegate.swift */; };
+		1F9599BE26075D2000C02B2C /* MainTabViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599BD26075D2000C02B2C /* MainTabViewDelegateProtocol.swift */; };
 		1FCECF412601387300C06370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCECF402601387300C06370 /* AppDelegate.swift */; };
 		1FCECF432601387300C06370 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCECF422601387300C06370 /* SceneDelegate.swift */; };
 		1FCECF4A2601387600C06370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCECF492601387600C06370 /* Assets.xcassets */; };
@@ -91,8 +95,8 @@
 		1F2C09822607434E000E690E /* MainTabPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPresenterTests.swift; sourceTree = "<group>"; };
 		1F2C098A2607465C000E690E /* MockMainTabValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainTabValidator.swift; sourceTree = "<group>"; };
 		1F2C09922607492B000E690E /* MainTabValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabValidatorProtocol.swift; sourceTree = "<group>"; };
-		1F3D97582606208700D65153 /* MainTabControllerWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabControllerWebServiceTests.swift; sourceTree = "<group>"; };
-		1F3D97632606216400D65153 /* MainTabControllerWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabControllerWebService.swift; sourceTree = "<group>"; };
+		1F3D97582606208700D65153 /* MainTabWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabWebServiceTests.swift; sourceTree = "<group>"; };
+		1F3D97632606216400D65153 /* MainTabWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabWebService.swift; sourceTree = "<group>"; };
 		1F3D9769260623BD00D65153 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1F3D976F260631A400D65153 /* MainTabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPresenter.swift; sourceTree = "<group>"; };
 		1F45443E2603B0B800CD05D7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,10 @@
 		1F85A5452603E9AA00307245 /* SignupPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterProtocol.swift; sourceTree = "<group>"; };
 		1F85A54A2603EA5000307245 /* MockSignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignupPresenter.swift; sourceTree = "<group>"; };
 		1F85A5522604AFA700307245 /* SignupError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupError.swift; sourceTree = "<group>"; };
+		1F9599AE2607505B00C02B2C /* MockMainTabWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainTabWebService.swift; sourceTree = "<group>"; };
+		1F9599B32607512D00C02B2C /* MainTabWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabWebServiceProtocol.swift; sourceTree = "<group>"; };
+		1F9599B826075C6400C02B2C /* MockMainTabViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainTabViewDelegate.swift; sourceTree = "<group>"; };
+		1F9599BD26075D2000C02B2C /* MainTabViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewDelegateProtocol.swift; sourceTree = "<group>"; };
 		1FCECF3D2601387300C06370 /* MiFaena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiFaena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCECF402601387300C06370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCECF422601387300C06370 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				1F2C098A2607465C000E690E /* MockMainTabValidator.swift */,
+				1F9599AE2607505B00C02B2C /* MockMainTabWebService.swift */,
+				1F9599B826075C6400C02B2C /* MockMainTabViewDelegate.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -231,7 +241,7 @@
 		1F3D97432605F72200D65153 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				1F3D97582606208700D65153 /* MainTabControllerWebServiceTests.swift */,
+				1F3D97582606208700D65153 /* MainTabWebServiceTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -250,7 +260,7 @@
 		1F3D97622606215000D65153 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				1F3D97632606216400D65153 /* MainTabControllerWebService.swift */,
+				1F3D97632606216400D65153 /* MainTabWebService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -276,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				1F2C09922607492B000E690E /* MainTabValidatorProtocol.swift */,
+				1F9599B32607512D00C02B2C /* MainTabWebServiceProtocol.swift */,
+				1F9599BD26075D2000C02B2C /* MainTabViewDelegateProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -871,12 +883,14 @@
 				1FE2808A2604E11500005970 /* SigninFormModelValidator.swift in Sources */,
 				1FCECF412601387300C06370 /* AppDelegate.swift in Sources */,
 				1F6786D0260298E800662A18 /* SignupModelValidatorProtocol.swift in Sources */,
+				1F9599BE26075D2000C02B2C /* MainTabViewDelegateProtocol.swift in Sources */,
 				1FE280CC26051F9900005970 /* SigninViewDelegateProtocol.swift in Sources */,
 				1F3D9770260631A400D65153 /* MainTabPresenter.swift in Sources */,
 				1FE280C2260517F000005970 /* SigninWebServiceProtocol.swift in Sources */,
-				1F3D97642606216400D65153 /* MainTabControllerWebService.swift in Sources */,
+				1F3D97642606216400D65153 /* MainTabWebService.swift in Sources */,
 				1F6786B626028D9600662A18 /* GlobalConstants.swift in Sources */,
 				1F45443F2603B0B800CD05D7 /* SignupViewController.swift in Sources */,
+				1F9599B42607512D00C02B2C /* MainTabWebServiceProtocol.swift in Sources */,
 				1F3D976A260623BD00D65153 /* User.swift in Sources */,
 				1F54F7CC260395CE005DC60D /* Extensions.swift in Sources */,
 				1FE280D22605273900005970 /* SigninViewController.swift in Sources */,
@@ -896,13 +910,15 @@
 				1FE280B22605065000005970 /* SigninPresenterTests.swift in Sources */,
 				1FE280BD2605169E00005970 /* MockSigninWebService.swift in Sources */,
 				1F2C098B2607465C000E690E /* MockMainTabValidator.swift in Sources */,
-				1F3D97592606208700D65153 /* MainTabControllerWebServiceTests.swift in Sources */,
+				1F3D97592606208700D65153 /* MainTabWebServiceTests.swift in Sources */,
 				1F6786862602489A00662A18 /* MockSignupWebService.swift in Sources */,
+				1F9599B926075C6400C02B2C /* MockMainTabViewDelegate.swift in Sources */,
 				1FE280DA2605321A00005970 /* SigninViewControllerTests.swift in Sources */,
 				1FE280E72605396600005970 /* MockSigninPresenter.swift in Sources */,
 				1FE280952604EE9D00005970 /* MockSigninModelValidator.swift in Sources */,
 				1F54F7D72603AE62005DC60D /* SignupViewControllerTests.swift in Sources */,
 				1F2C09832607434E000E690E /* MainTabPresenterTests.swift in Sources */,
+				1F9599AF2607505B00C02B2C /* MockMainTabWebService.swift in Sources */,
 				1F6786BB260290EC00662A18 /* SignupPresenterTests.swift in Sources */,
 				1F54F7B8260361A1005DC60D /* MockSignupViewDelegate.swift in Sources */,
 				1F2C097926073B41000E690E /* MainTabValidatorTests.swift in Sources */,
