@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 class MainTabBarController:UITabBarController {
     
@@ -14,7 +14,9 @@ class MainTabBarController:UITabBarController {
     
     var user:User? {
         didSet {
-            // set the user on the suppliers view controller
+            guard let navCon = viewControllers?[0] as? UINavigationController else { return }
+            guard let suppliersVC = navCon.viewControllers.first as? SuppliersController else { return }
+            suppliersVC.user = user
         }
     }
     
@@ -36,8 +38,6 @@ class MainTabBarController:UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
-        configureViewControllers()
         
         if mainTabBarControllerPresenter == nil {
             let webService = MainTabWebService()
@@ -74,6 +74,7 @@ extension MainTabBarController:MainTabViewDelegateProtocol {
     func successfulUserSignedIn(user: User) {
         configureViewControllers()
         configureUI()
+        self.user = user
     }
     
     func unsuccessfulUserSignedIn() {

@@ -9,6 +9,8 @@ import UIKit
 
 
 class SuppliersController: UICollectionViewController {
+    
+    var user:User?
 
     override func viewDidLoad() {
         super.viewDidLoad()

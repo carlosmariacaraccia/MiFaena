@@ -9,6 +9,8 @@ import UIKit
 
 class SuppliersInvoiceController:UIViewController {
     
+    static let ident = "suppliersViewController"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

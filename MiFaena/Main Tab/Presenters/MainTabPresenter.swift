@@ -22,6 +22,7 @@ class MainTabPresenter: MainTabBarControllerPresenterProtocol {
     func processIsUserSignedIn() {
         
         if mainTabValidator.isUserSignedIn() == nil {
+            delegate?.unsuccessfulUserSignedIn()
             return
         }
         
