@@ -15,7 +15,7 @@ class MockSuppliersInvoiceSummeriesViewDelegate:SuppliersInvoiceSummariesViewDel
     var expectation:XCTestExpectation?
     
     func successfulRetrieveOfInvSummaries(invoiceSummaries: [SuppliersInvSummary]) {
-        
+                
         expectation?.fulfill()
     }
     
@@ -23,6 +23,4 @@ class MockSuppliersInvoiceSummeriesViewDelegate:SuppliersInvoiceSummariesViewDel
         
     }
     
-    
-
 }

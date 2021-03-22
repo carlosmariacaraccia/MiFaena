@@ -223,11 +223,15 @@ extension SignupViewController: UIImagePickerControllerDelegate, UINavigationCon
 
 extension SignupViewController: SignupViewDelegateProtocol {
     func successfulSignup() {
-        // TODO: Handle success
-        if self.spinnerController != nil {
+        DispatchQueue.main.async {
+            guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
+            guard let tab = window.rootViewController as? MainTabBarController else { return }
+            tab.configureViewControllers()
+            tab.configureUI()
             self.spinnerController!.willMove(toParent: nil)
             self.spinnerController!.view.removeFromSuperview()
             self.spinnerController!.removeFromParent()
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

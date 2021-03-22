@@ -38,7 +38,7 @@ class MainTabBarController:UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        //try? Auth.auth().signOut()
         if mainTabBarControllerPresenter == nil {
             let webService = MainTabWebService()
             let validator = MainTabValidator()

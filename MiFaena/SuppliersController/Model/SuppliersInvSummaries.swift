@@ -14,6 +14,7 @@ struct SuppliersInvSummary {
     let supplierId:String
     let suppliersInvoiceId:String
     let suppliersMovementId:String
+    let suppliersShortName:String
     let invoiceType:String
     let invoiceNumber:String
     let invoiceDate:Date
@@ -26,6 +27,7 @@ struct SuppliersInvSummary {
         guard let supplierId = dictionary["supplierId"] as? String else { return nil }
         guard let suppliersInvoiceId = dictionary["suppliersInvoiceId"] as? String else { return nil }
         guard let suppliersMovementId = dictionary["suppliersMovementId"] as? String else { return nil }
+        guard let suppliersShortName = dictionary["suppliersShortname"] as? String else { return nil }
         guard let invoiceType = dictionary["invoiceType"] as? String else { return nil }
         guard let invoiceNumber = dictionary["invoiceNumber"] as? String else { return  nil }
         guard let invoiceDescription = dictionary["invoiceDescription"] as? String else { return nil }
@@ -38,6 +40,7 @@ struct SuppliersInvSummary {
         self.supplierId = supplierId
         self.suppliersInvoiceId = suppliersInvoiceId
         self.suppliersMovementId = suppliersMovementId
+        self.suppliersShortName = suppliersShortName
         self.invoiceType = invoiceType
         self.invoiceNumber = invoiceNumber
         self.suppliersIconName = suppliersIconName

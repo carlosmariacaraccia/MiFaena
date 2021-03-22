@@ -11,6 +11,9 @@ import Foundation
 class SuppliersInvoiceSummariesWebService: SuppliersInvoiceSummariesWebServiceProtocol {
 
     
+    /// Function that gets the suppliers invoice summaries from firebase
+    /// - Parameter completionHandler: An array with the supplier invoices summaries
+    /// - Returns: Void.
     func getSuppliersInvoiceSummaries(completionHandler:@escaping(([SuppliersInvSummary]?)->())) {
         var invoiceSummaries = [SuppliersInvSummary]()
         REF_SUPPLIERS_INV_SUMMARIES.observe(.childAdded) { (snapshot) in
@@ -22,6 +25,11 @@ class SuppliersInvoiceSummariesWebService: SuppliersInvoiceSummariesWebServicePr
         }
     }
     
+    /// Fuction that gets one supplier invoice summary from Firebase by inputting its id.
+    /// - Parameters:
+    ///   - invoiceSummaryId: The id of the suppliers invoice summary.
+    ///   - completionHandler: The invoice summary returned from Firebase.
+    /// - Returns: Void.
     func fetchSupplierInvoiceSummary(invoiceSummaryId:String, completionHandler:@escaping(SuppliersInvSummary)->()) {
         REF_SUPPLIERS_INV_SUMMARIES.observeSingleEvent(of: .value) { (snapshot) in
             guard let dictionary = snapshot.value as? [String:AnyObject] else { return }

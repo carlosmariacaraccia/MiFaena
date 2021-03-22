@@ -8,12 +8,12 @@
 import Foundation
 
 
-class SuppliersInvoiceSummiersPresenter {
+class SuppliersInvoiceSummiersPresenter: SupplierInvoiceSummariesPresenterProtocol {
     
     let supplierInvoiceSummariesWebService: SuppliersInvoiceSummariesWebServiceProtocol
     let supplierInvoiceSummariesViewDelegate: SuppliersInvoiceSummariesViewDelegateProtocol
     
-    init(supplierInvoiceSummariesWebService: SuppliersInvoiceSummariesWebServiceProtocol, supplierInvoiceSummariesViewDelegate: SuppliersInvoiceSummariesViewDelegateProtocol) {
+    required init(supplierInvoiceSummariesWebService: SuppliersInvoiceSummariesWebServiceProtocol, supplierInvoiceSummariesViewDelegate: SuppliersInvoiceSummariesViewDelegateProtocol) {
         self.supplierInvoiceSummariesWebService = supplierInvoiceSummariesWebService
         self.supplierInvoiceSummariesViewDelegate = supplierInvoiceSummariesViewDelegate
     }

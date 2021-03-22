@@ -33,6 +33,9 @@
 		1F5A825D2608F6E600D90522 /* SuppliersInvoiceSummariesWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A825C2608F6E600D90522 /* SuppliersInvoiceSummariesWebServiceProtocol.swift */; };
 		1F5A82632608FD2300D90522 /* MockSuppliersInvoiceSummeriesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A82622608FD2300D90522 /* MockSuppliersInvoiceSummeriesViewDelegate.swift */; };
 		1F5A826E2608FD8700D90522 /* SuppliersInvoiceSummariesViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A826D2608FD8700D90522 /* SuppliersInvoiceSummariesViewDelegateProtocol.swift */; };
+		1F5A8274260910AC00D90522 /* SuppliersControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A8273260910AC00D90522 /* SuppliersControllerTests.swift */; };
+		1F5A827C26091B0E00D90522 /* MockSupplierInvoiceSummariesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A827B26091B0E00D90522 /* MockSupplierInvoiceSummariesPresenter.swift */; };
+		1F5A828126091B6600D90522 /* SupplierInvoiceSummariesPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A828026091B6600D90522 /* SupplierInvoiceSummariesPresenterProtocol.swift */; };
 		1F6786862602489A00662A18 /* MockSignupWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6786852602489A00662A18 /* MockSignupWebService.swift */; };
 		1F67868B260248ED00662A18 /* SignupWebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F67868A260248ED00662A18 /* SignupWebServiceProtocol.swift */; };
 		1F6786A52602717300662A18 /* genericImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1F6786A42602717300662A18 /* genericImage.jpeg */; };
@@ -135,6 +138,9 @@
 		1F5A825C2608F6E600D90522 /* SuppliersInvoiceSummariesWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceSummariesWebServiceProtocol.swift; sourceTree = "<group>"; };
 		1F5A82622608FD2300D90522 /* MockSuppliersInvoiceSummeriesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSuppliersInvoiceSummeriesViewDelegate.swift; sourceTree = "<group>"; };
 		1F5A826D2608FD8700D90522 /* SuppliersInvoiceSummariesViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceSummariesViewDelegateProtocol.swift; sourceTree = "<group>"; };
+		1F5A8273260910AC00D90522 /* SuppliersControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersControllerTests.swift; sourceTree = "<group>"; };
+		1F5A827B26091B0E00D90522 /* MockSupplierInvoiceSummariesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSupplierInvoiceSummariesPresenter.swift; sourceTree = "<group>"; };
+		1F5A828026091B6600D90522 /* SupplierInvoiceSummariesPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierInvoiceSummariesPresenterProtocol.swift; sourceTree = "<group>"; };
 		1F6786852602489A00662A18 /* MockSignupWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignupWebService.swift; sourceTree = "<group>"; };
 		1F67868A260248ED00662A18 /* SignupWebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebServiceProtocol.swift; sourceTree = "<group>"; };
 		1F6786A42602717300662A18 /* genericImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = genericImage.jpeg; sourceTree = "<group>"; };
@@ -353,6 +359,7 @@
 		1F4F88B52608BE180069E478 /* Suppliers Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F5A82722609107C00D90522 /* Controller */,
 				1F5A82522608F69200D90522 /* MockSuppliersInvoiceSummariesWebService */,
 				1F5A823D2608F31900D90522 /* Presenter */,
 				1F4F88B62608C1C60069E478 /* Network */,
@@ -449,6 +456,7 @@
 			children = (
 				1F5A82532608F6AA00D90522 /* MockSuppliersInvoiceSummariesWebService.swift */,
 				1F5A82622608FD2300D90522 /* MockSuppliersInvoiceSummeriesViewDelegate.swift */,
+				1F5A827B26091B0E00D90522 /* MockSupplierInvoiceSummariesPresenter.swift */,
 			);
 			path = MockSuppliersInvoiceSummariesWebService;
 			sourceTree = "<group>";
@@ -458,8 +466,17 @@
 			children = (
 				1F5A825C2608F6E600D90522 /* SuppliersInvoiceSummariesWebServiceProtocol.swift */,
 				1F5A826D2608FD8700D90522 /* SuppliersInvoiceSummariesViewDelegateProtocol.swift */,
+				1F5A828026091B6600D90522 /* SupplierInvoiceSummariesPresenterProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1F5A82722609107C00D90522 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A8273260910AC00D90522 /* SuppliersControllerTests.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		1F6786BF2602928E00662A18 /* Presenters */ = {
@@ -1100,6 +1117,7 @@
 				1F2C09932607492B000E690E /* MainTabValidatorProtocol.swift in Sources */,
 				1FEA609E2602191B00654538 /* SignupFormModel.swift in Sources */,
 				1F54F7D12603961C005DC60D /* Utils.swift in Sources */,
+				1F5A828126091B6600D90522 /* SupplierInvoiceSummariesPresenterProtocol.swift in Sources */,
 				1FE280EC260539F600005970 /* SigninPresenterProtocol.swift in Sources */,
 				1F54F7C126036359005DC60D /* SignupViewDelegateProtocol.swift in Sources */,
 				1F4F88A5260810B10069E478 /* SuppliersInvoiceController.swift in Sources */,
@@ -1167,10 +1185,12 @@
 				1F54F7B8260361A1005DC60D /* MockSignupViewDelegate.swift in Sources */,
 				1F2C097926073B41000E690E /* MainTabValidatorTests.swift in Sources */,
 				1FE280802604DFF800005970 /* SigninFormModelValidatorTests.swift in Sources */,
+				1F5A827C26091B0E00D90522 /* MockSupplierInvoiceSummariesPresenter.swift in Sources */,
 				1F6786C62602947800662A18 /* MockSignupModelValidator.swift in Sources */,
 				1F85A54B2603EA5000307245 /* MockSignupPresenter.swift in Sources */,
 				1F85A53B2603B57100307245 /* SignupFirebaseTests.swift in Sources */,
 				1FE280C726051E9100005970 /* MockSigninViewDelegate.swift in Sources */,
+				1F5A8274260910AC00D90522 /* SuppliersControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
