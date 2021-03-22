@@ -7,13 +7,13 @@
 
 import Foundation
 
-class MainTabPresenter {
+class MainTabPresenter: MainTabBarControllerPresenterProtocol {
     
     private var mainTabValidator:MainTabValidatorProtocol
     private var mainTabWebServie:MainTabWebServiceProtocol
     private weak var delegate:MainTabViewDelegateProtocol?
     
-    init(mainTabValidator:MainTabValidatorProtocol, mainTabWebService:MainTabWebServiceProtocol, delegate:MainTabViewDelegateProtocol) {
+    required init(mainTabValidator:MainTabValidatorProtocol, mainTabWebService:MainTabWebServiceProtocol, delegate:MainTabViewDelegateProtocol) {
         self.mainTabValidator = mainTabValidator
         self.mainTabWebServie = mainTabWebService
         self.delegate = delegate

@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-class MainTabValidator {
+class MainTabValidator:MainTabValidatorProtocol {
     
     func isUserSignedIn() -> String? {
         return Auth.auth().currentUser?.uid

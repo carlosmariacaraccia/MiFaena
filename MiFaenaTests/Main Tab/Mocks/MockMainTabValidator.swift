@@ -17,6 +17,4 @@ class MockMainTabValidator:MainTabValidatorProtocol {
         return "61eucxcF6HaylMBStyhwqAF8Sah1"
     }
     
-    
-    
 }
