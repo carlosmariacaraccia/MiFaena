@@ -9,7 +9,7 @@ import XCTest
 @testable import MiFaena
 
 
-class SuppliersInvoiceSummariesWebServiceTests: XCTestCase {
+class SupsInvsSumsWebServiceTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,14 +19,17 @@ class SuppliersInvoiceSummariesWebServiceTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testFetchUnpaidInvoicesWebService_WhenCalled_FetchesUnpaidInvoices() {
+    func testSupsInvsSumsWebService_WhenGetSuppliersSummaryInvoicesIsCalled_SuppliersSummaryInvoicesAreReturned() {
+        let mockDatabaseReference = MockDatabaseReference()
+        let sut = SupsInvsSumsWebService(databaseReference: mockDatabaseReference)
         
-        let sut = SuppliersInvoiceSummariesWebService()
+        let myExpectation = expectation(description: "returnSuppliersInvoiceSummaries")
         
-        sut.getSuppliersInvoiceSummaries { (supInvSummaries) in
-            XCTAssertNotNil(supInvSummaries, "The suppliers invoice summaries where nil.")
+        sut.getSuppliersInvoiceSummaries { supplierInvoiceSummaries in
+                XCTAssertTrue(supplierInvoiceSummaries?.count == 1, "The supplierInvoiceSummaries did not contained 1 element.")
+                myExpectation.fulfill()
         }
         
+        self.wait(for: [myExpectation], timeout: 2)
     }
-
 }

@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Firebase
+
 
 protocol SuppliersInvoiceSummariesWebServiceProtocol:AnyObject {
+    
+    init(databaseReference: DatabaseReference)
     
     func getSuppliersInvoiceSummaries(completionHandler:@escaping(([SuppliersInvSummary]?)->()))
     

@@ -86,6 +86,8 @@
 		1FE280EC260539F600005970 /* SigninPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE280EB260539F600005970 /* SigninPresenterProtocol.swift */; };
 		1FEA60992602151D00654538 /* SignupWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA60982602151D00654538 /* SignupWebService.swift */; };
 		1FEA609E2602191B00654538 /* SignupFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEA609D2602191B00654538 /* SignupFormModel.swift */; };
+		1FED604E260A63CF0053B489 /* MockDatabaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED604D260A63CF0053B489 /* MockDatabaseReference.swift */; };
+		1FED6053260A64580053B489 /* MockSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FED6052260A64580053B489 /* MockSnapshot.swift */; };
 		1FF1F9342607F4520010291B /* MockMainTabBarControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1F9332607F4520010291B /* MockMainTabBarControllerPresenter.swift */; };
 		1FF1F9392607F6850010291B /* MainTabBarControllerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1F9382607F6850010291B /* MainTabBarControllerPresenterProtocol.swift */; };
 		A05E7A46EDA79DE6BD20AAAE /* Pods_MiFaena.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C54B13E86D08378DD70627 /* Pods_MiFaena.framework */; };
@@ -197,6 +199,8 @@
 		1FE280EB260539F600005970 /* SigninPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninPresenterProtocol.swift; sourceTree = "<group>"; };
 		1FEA60982602151D00654538 /* SignupWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebService.swift; sourceTree = "<group>"; };
 		1FEA609D2602191B00654538 /* SignupFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFormModel.swift; sourceTree = "<group>"; };
+		1FED604D260A63CF0053B489 /* MockDatabaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseReference.swift; sourceTree = "<group>"; };
+		1FED6052260A64580053B489 /* MockSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSnapshot.swift; sourceTree = "<group>"; };
 		1FF1F9332607F4520010291B /* MockMainTabBarControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainTabBarControllerPresenter.swift; sourceTree = "<group>"; };
 		1FF1F9382607F6850010291B /* MainTabBarControllerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerPresenterProtocol.swift; sourceTree = "<group>"; };
 		260C27259012D7A7C73EBC8E /* Pods-MiFaena.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiFaena.debug.xcconfig"; path = "Target Support Files/Pods-MiFaena/Pods-MiFaena.debug.xcconfig"; sourceTree = "<group>"; };
@@ -457,6 +461,8 @@
 				1F5A82532608F6AA00D90522 /* MockSuppliersInvoiceSummariesWebService.swift */,
 				1F5A82622608FD2300D90522 /* MockSuppliersInvoiceSummeriesViewDelegate.swift */,
 				1F5A827B26091B0E00D90522 /* MockSupplierInvoiceSummariesPresenter.swift */,
+				1FED604D260A63CF0053B489 /* MockDatabaseReference.swift */,
+				1FED6052260A64580053B489 /* MockSnapshot.swift */,
 			);
 			path = MockSuppliersInvoiceSummariesWebService;
 			sourceTree = "<group>";
@@ -1167,6 +1173,7 @@
 				1FE2809A2604F0B200005970 /* SigninWebServiceTests.swift in Sources */,
 				1FE280B22605065000005970 /* SigninPresenterTests.swift in Sources */,
 				1F9599E02607E03700C02B2C /* MainTabBarControllerTests.swift in Sources */,
+				1FED6053260A64580053B489 /* MockSnapshot.swift in Sources */,
 				1FE280BD2605169E00005970 /* MockSigninWebService.swift in Sources */,
 				1F2C098B2607465C000E690E /* MockMainTabValidator.swift in Sources */,
 				1F3D97592606208700D65153 /* MainTabWebServiceTests.swift in Sources */,
@@ -1184,6 +1191,7 @@
 				1F6786BB260290EC00662A18 /* SignupPresenterTests.swift in Sources */,
 				1F54F7B8260361A1005DC60D /* MockSignupViewDelegate.swift in Sources */,
 				1F2C097926073B41000E690E /* MainTabValidatorTests.swift in Sources */,
+				1FED604E260A63CF0053B489 /* MockDatabaseReference.swift in Sources */,
 				1FE280802604DFF800005970 /* SigninFormModelValidatorTests.swift in Sources */,
 				1F5A827C26091B0E00D90522 /* MockSupplierInvoiceSummariesPresenter.swift in Sources */,
 				1F6786C62602947800662A18 /* MockSignupModelValidator.swift in Sources */,

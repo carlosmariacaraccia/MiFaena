@@ -23,6 +23,7 @@ class MainTabBarController:UITabBarController {
     lazy var actionButton:UIButton = {
         let button = UIButton()
         let buttonImage = UIImage(named: "actionButtonAddReceipt")
+        buttonImage?.withTintColor(.white)
         button.setImage(buttonImage, for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(handleActionButtonTap), for: .touchUpInside)
@@ -38,7 +39,6 @@ class MainTabBarController:UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        //try? Auth.auth().signOut()
         if mainTabBarControllerPresenter == nil {
             let webService = MainTabWebService()
             let validator = MainTabValidator()

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 class SuppliersController: UICollectionViewController {
     
@@ -18,7 +18,7 @@ class SuppliersController: UICollectionViewController {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         if presenter == nil {
-            let webService = SuppliersInvoiceSummariesWebService()
+            let webService = SupsInvsSumsWebService(databaseReference: DatabaseReference())
             presenter = SuppliersInvoiceSummiersPresenter(supplierInvoiceSummariesWebService: webService, supplierInvoiceSummariesViewDelegate: self)
             presenter?.processFetchSupplierInvoiceSummaries()
         }

@@ -6,34 +6,40 @@
 //
 
 import Foundation
+import Firebase
 
 
-class SuppliersInvoiceSummariesWebService: SuppliersInvoiceSummariesWebServiceProtocol {
-
+class SupsInvsSumsWebService:SuppliersInvoiceSummariesWebServiceProtocol {
     
-    /// Function that gets the suppliers invoice summaries from firebase
-    /// - Parameter completionHandler: An array with the supplier invoices summaries
+    private let databaseReference: DatabaseReference
+    
+    required init(databaseReference: DatabaseReference) {
+        self.databaseReference = databaseReference
+    }
+    
+    /// Function that gets and array of  the suppliers invoice summaries from firebase.
+    /// - Parameter completionHandler: The suppliersInvoicesSummaries array that will be returned.
     /// - Returns: Void.
-    func getSuppliersInvoiceSummaries(completionHandler:@escaping(([SuppliersInvSummary]?)->())) {
+    func getSuppliersInvoiceSummaries(completionHandler: @escaping (([SuppliersInvSummary]?) -> ())) {
         var invoiceSummaries = [SuppliersInvSummary]()
-        REF_SUPPLIERS_INV_SUMMARIES.observe(.childAdded) { (snapshot) in
-            let supplierInvoiceSummaryId = snapshot.key
-            self.fetchSupplierInvoiceSummary(invoiceSummaryId: supplierInvoiceSummaryId) { (suppInvSummary) in
-                invoiceSummaries.append(suppInvSummary)
+        self.databaseReference.child("suppliers_invoices_summaries").observe(.childAdded) { (snapshot) in
+            let supplierInvSumId = snapshot.key
+            self.fetchSupplierInvoiceSummary(invoiceSummaryId: supplierInvSumId) { (supInvSum) in
+                invoiceSummaries.append(supInvSum)
                 completionHandler(invoiceSummaries)
             }
         }
     }
     
-    /// Fuction that gets one supplier invoice summary from Firebase by inputting its id.
+    /// Function that gets the suppliers invoice summaries from firebase.
     /// - Parameters:
     ///   - invoiceSummaryId: The id of the suppliers invoice summary.
     ///   - completionHandler: The invoice summary returned from Firebase.
     /// - Returns: Void.
     func fetchSupplierInvoiceSummary(invoiceSummaryId:String, completionHandler:@escaping(SuppliersInvSummary)->()) {
-        REF_SUPPLIERS_INV_SUMMARIES.observeSingleEvent(of: .value) { (snapshot) in
-            guard let dictionary = snapshot.value as? [String:AnyObject] else { return }
-            let supplierInvoiceSummary = SuppliersInvSummary(invoiceSummaryId: invoiceSummaryId, dictionary: dictionary)
+        self.databaseReference.child("suppliers_invoices_summaries").child(invoiceSummaryId).observeSingleEvent(of: .value) { (snapshot) in
+            guard let dict = snapshot.value as? [String:AnyObject] else { return }
+            let supplierInvoiceSummary = SuppliersInvSummary(invoiceSummaryId: invoiceSummaryId, dictionary: dict)
             completionHandler(supplierInvoiceSummary!)
         }
     }
