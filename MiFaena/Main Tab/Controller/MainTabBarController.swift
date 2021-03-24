@@ -21,9 +21,8 @@ class MainTabBarController:UITabBarController {
     }
     
     lazy var actionButton:UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         let buttonImage = UIImage(named: "actionButtonAddReceipt")
-        buttonImage?.withTintColor(.white)
         button.setImage(buttonImage, for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(handleActionButtonTap), for: .touchUpInside)
@@ -47,14 +46,7 @@ class MainTabBarController:UITabBarController {
         }
     }
     
-    // MARK:- Helpers
     
-    
-    func configureUI() {
-        view.addSubview(actionButton)
-        actionButton.anchor(bottom: view.bottomAnchor, right: view.rightAnchor, paddingBottom: 120, paddingRight: 16, width: 64, height: 64)
-        actionButton.layer.cornerRadius = 56 / 2
-    }
 
     
     // MARK: - SELECTORS
@@ -85,6 +77,15 @@ extension MainTabBarController:MainTabViewDelegateProtocol {
             self.present(navCon, animated: true, completion: nil)
         }
     }
+    
+    // MARK:- Helpers
+
+    func configureUI() {
+        view.addSubview(actionButton)
+        actionButton.anchor(bottom: view.bottomAnchor, right: view.rightAnchor, paddingBottom: 120, paddingRight: 16, width: 64, height: 64)
+        actionButton.layer.cornerRadius = 56 / 2
+    }
+
     
     func configureViewControllers() {
         let suppliersLayout = UICollectionViewFlowLayout()

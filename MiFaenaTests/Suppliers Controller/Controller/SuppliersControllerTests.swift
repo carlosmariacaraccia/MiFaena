@@ -32,6 +32,7 @@ class SuppliersControllerTests: XCTestCase {
         
         let layout = UICollectionViewFlowLayout()
         let sut = SuppliersController(collectionViewLayout: layout)
+        sut.loadViewIfNeeded()
         let mockDatabaseReference = MockDatabaseReference()
         let mockWebService = MockSuppliersInvoiceSummariesWebService(databaseReference: mockDatabaseReference)
         let mockDelegate = MockSuppliersInvoiceSummeriesViewDelegate()

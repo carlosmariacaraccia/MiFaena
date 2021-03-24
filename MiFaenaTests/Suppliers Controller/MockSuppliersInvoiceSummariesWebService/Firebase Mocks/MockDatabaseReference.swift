@@ -8,7 +8,29 @@
 import Foundation
 import Firebase
 
+class MockDalaiLama {
+    
+}
+
+enum FirebaseMockSnapshots {
+    
+    case suppliersInvoiceSummaries(mock: MockSnapshotSuppliersInvoicesSummary)
+    case xdd(mock:MockDalaiLama)
+    
+    var mock:AnyObject? {
+        
+        switch self {
+        case .suppliersInvoiceSummaries(mock: let mockObject):
+            return mockObject
+        case .xdd(mock: let dalaiLama):
+            return dalaiLama
+        }
+    }
+    
+}
+
 class MockDatabaseReference:DatabaseReference {
+    
     
     override func child(_ pathString: String) -> DatabaseReference {
         self
