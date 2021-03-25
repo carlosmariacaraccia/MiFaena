@@ -23,7 +23,7 @@ class DottedButtonSheet:NSObject {
         view.addGestureRecognizer(tap)
         return view
     }()
-    
+
     private lazy var cancelButton:UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Cancel", for: .normal)
@@ -114,6 +114,11 @@ extension DottedButtonSheet: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         60
     }
+    
+    // TODO: add the didSelect row at indexPath to select a row and got to the view controller where I can select the payment options.
+    // TODO: add the necessary view controllers to achieve this goal, this will depend on the options, it will be treated with a switch.
+    // TODO: Create a view controller to process the payments.
+    // TODO: Change the cancel font of the footer view to an attributed string so it looks better. The font should be Avenir Next, the size should be 20 and the color .meattradered.
 }
 
 

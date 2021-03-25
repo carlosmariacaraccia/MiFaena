@@ -20,8 +20,8 @@ struct DottedButtonSheetViewModel {
         switch dottedButtonSheetOptions {
         case .suppliersDottedButton (let suppInvSummary):
             var results = [String]()
-            let pay = "PAY \(suppInvSummary.amount) TO \(suppInvSummary.suppliersShortName)"
-            let remove = "REMOVE \(suppInvSummary.invoiceNumber) FROM \(suppInvSummary.suppliersShortName)"
+            let pay = "PAY \(suppInvSummary.amount) TO \(suppInvSummary.suppliersShortName)".uppercased()
+            let remove = "REMOVE \(suppInvSummary.invoiceNumber) FROM \(suppInvSummary.suppliersShortName)".uppercased()
             results.append(pay)
             results.append(remove)
             return results
@@ -39,5 +39,9 @@ struct DottedButtonSheetViewModel {
             return results
         }
     }
+    
+    // TODO: add a property that returns the height the cell should have to accommodate to the cell's width, so all the text in the label could fit perfectly. 
+    // TODO: add an attributed string to format directly the label's text.
+    // TODO: change the view model property and return an [UIImageView] formatted as the labels icon should be received.
     
 }

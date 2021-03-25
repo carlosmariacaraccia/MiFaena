@@ -19,7 +19,7 @@ class InvoiceSummaryCell:UICollectionViewCell {
     
     var invoiceSummary:SuppliersInvSummary? {
         didSet {
-            supplierNameLabel.text = invoiceSummary?.suppliersShortName
+            supplierNameLabel.text = invoiceSummary?.suppliersShortName.uppercased()
             let invoiceType = invoiceSummary?.invoiceType ?? "FCA"
             let invoiceNumber = invoiceSummary?.invoiceNumber ?? "1048-41234134"
             invoiceNumberLabel.text = invoiceType + " " + invoiceNumber
