@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol SuppliersInvoiceCellDelegate:class {
-    func showOptionsSheet()
+    func showOptionsSheet(invoiceSummary:SuppliersInvSummary)
 }
 
 
@@ -17,7 +17,18 @@ class InvoiceSummaryCell:UICollectionViewCell {
     
     // MARK:- Properties
     
-    var invoiceSummary:SuppliersInvSummary?
+    var invoiceSummary:SuppliersInvSummary? {
+        didSet {
+            supplierNameLabel.text = invoiceSummary?.suppliersShortName
+            let invoiceType = invoiceSummary?.invoiceType ?? "FCA"
+            let invoiceNumber = invoiceSummary?.invoiceNumber ?? "1048-41234134"
+            invoiceNumberLabel.text = invoiceType + " " + invoiceNumber
+            let invDate = invoiceSummary?.invoiceDate ?? Date()
+            invoiceDateLabel.text = formatter.string(from: invDate)
+            let invAmount = invoiceSummary?.amount ?? 12345234.45
+            invoiceAmountLabel.text = numberFormatter.string(from:invAmount as NSNumber) ?? "$ 12345234.45"
+        }
+    }
     
     lazy var numberFormatter:NumberFormatter = {
         let formatter = NumberFormatter()
@@ -25,6 +36,9 @@ class InvoiceSummaryCell:UICollectionViewCell {
         formatter.currencyGroupingSeparator = "."
         formatter.currencySymbol = "$"
         formatter.maximumFractionDigits = 2
+        formatter.alwaysShowsDecimalSeparator = true
+        formatter.usesGroupingSeparator = true
+        formatter.numberStyle = .currencyAccounting
         return formatter
     }()
     
@@ -38,7 +52,6 @@ class InvoiceSummaryCell:UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next Bold", size: 18)
         label.textColor = UIColor.black.withAlphaComponent(0.65)
-        label.text = invoiceSummary?.suppliersShortName ?? "COLOMBO Y MAGLIANO"
         return label
     }()
     
@@ -47,6 +60,7 @@ class InvoiceSummaryCell:UICollectionViewCell {
         let buttonImage = #imageLiteral(resourceName: "Invoice Dot Menu")
         button.setImage(buttonImage, for: .normal)
         button.addTarget(self, action: #selector(showOptionsSheet), for: .touchUpInside)
+        button.tintColor = .black
         return button
     }()
 
@@ -67,10 +81,6 @@ class InvoiceSummaryCell:UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next", size: 15)
         label.textColor = UIColor.black.withAlphaComponent(0.6)
-        let invoiceType = invoiceSummary?.invoiceType ?? "FCA"
-        let invoiceNumber = invoiceSummary?.invoiceNumber ?? "1048-41234134"
-        let labelText = invoiceType + " " + invoiceNumber
-        label.text = labelText
         label.textAlignment = .left
         return label
     }()
@@ -79,8 +89,6 @@ class InvoiceSummaryCell:UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next", size: 15)
         label.textColor = UIColor.black.withAlphaComponent(0.6)
-        let invDate = invoiceSummary?.invoiceDate ?? Date()
-        label.text = formatter.string(from: invDate)
         label.textAlignment = .right
         return label
     }()
@@ -120,8 +128,6 @@ class InvoiceSummaryCell:UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont(name: "Avenir Next Bold", size: 15)
         label.textColor = UIColor.black.withAlphaComponent(0.6)
-        let invAmount = invoiceSummary?.amount ?? 12345234.45
-        label.text = numberFormatter.string(from: NSNumber(nonretainedObject: invAmount)) ?? "$ 12345234.45"
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
@@ -148,7 +154,10 @@ class InvoiceSummaryCell:UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        configureUI()
+    }
+    
+    func configureUI() {
         backgroundColor = .white
         layer.cornerRadius = 10
         
@@ -162,7 +171,7 @@ class InvoiceSummaryCell:UICollectionViewCell {
         
         addSubview(thirdRowContainerView)
         thirdRowContainerView.anchor(top: secondRowContainerView.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingBottom: 12, paddingRight: 12)
-        
+
     }
     
     required init?(coder: NSCoder) {
@@ -174,8 +183,8 @@ class InvoiceSummaryCell:UICollectionViewCell {
     
     
     @objc func showOptionsSheet() {
-        
-        delegate?.showOptionsSheet()
+        guard let invSum = invoiceSummary else { return }
+        delegate?.showOptionsSheet(invoiceSummary: invSum)
     }
 
     
