@@ -26,7 +26,7 @@ class DottedButtonSheet:NSObject {
     private let tableView = UITableView()
     private var window:UIWindow?
     
-    private lazy var bb:UIView = {
+    private lazy var backgroundView:UIView = {
         let view = UIView()
         view.alpha = 0
         view.backgroundColor = UIColor(white: 0, alpha: 0.5)
@@ -44,7 +44,7 @@ class DottedButtonSheet:NSObject {
     
     @objc func handleDismissal() {
         UIView.animate(withDuration: 0.5) {
-            self.bb.alpha = 0
+            self.backgroundView.alpha = 0
             self.tableView.frame.origin.y += 300
         }
     }
@@ -57,38 +57,29 @@ class DottedButtonSheet:NSObject {
         tableView.separatorStyle = .none
         tableView.layer.cornerRadius = 10
         tableView.isScrollEnabled = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: ReusableIdentifiers.dottedButtonReuseIdentifier)
+        tableView.register(DottedButtonSheetCell.self, forCellReuseIdentifier: ReusableIdentifiers.dottedButtonReuseIdentifier)
     }
     
     func show() {
-        //guard let wind = UIApplication.shared.windows.first else { return }
         guard let x = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return }
         self.window = x
 
-        window!.addSubview(bb)
-        bb.frame = window!.frame
-        bb.isUserInteractionEnabled = true
+        window!.addSubview(backgroundView)
+        backgroundView.frame = window!.frame
+        backgroundView.isUserInteractionEnabled = true
         
         
         //guard let suppInvSummaryPassed = options.objectPassed as? SuppliersInvSummary else { return }
         window!.addSubview(tableView)
-        tableView.frame = CGRect(x: 0, y: window!.frame.height, width: window!.frame.width, height: 300)
-        tableView.isUserInteractionEnabled = true
-        UIView.animateKeyframes(withDuration: 0.5, delay: 0, options: .allowUserInteraction) {
-            self.bb.alpha = 1
-            self.tableView.frame.origin.y -= 300
-            self.bb.isUserInteractionEnabled = true
-            self.window?.isUserInteractionEnabled = true
+        let height = CGFloat(3*60)
+        tableView.frame = CGRect(x: 0, y: window!.frame.height, width: window!.frame.width, height: height)
+        
+        // show the added view
+        UIView.animate(withDuration:0.5) {
+            self.backgroundView.alpha = 1
+            self.tableView.frame.origin.y -= height
         }
     }
-    
-    @objc func handleTap() {
-        print("tapped")
-    }
-}
-
-extension SuppliersController {
-    
 }
 
 

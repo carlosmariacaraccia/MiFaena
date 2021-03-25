@@ -60,6 +60,7 @@
 		1F9599BE26075D2000C02B2C /* MainTabViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599BD26075D2000C02B2C /* MainTabViewDelegateProtocol.swift */; };
 		1F9599D52607DF8800C02B2C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599D42607DF8800C02B2C /* MainTabBarController.swift */; };
 		1F9599E02607E03700C02B2C /* MainTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599DF2607E03700C02B2C /* MainTabBarControllerTests.swift */; };
+		1FB5B250260CBE12001BDE72 /* DottedButtonSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */; };
 		1FCECF412601387300C06370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCECF402601387300C06370 /* AppDelegate.swift */; };
 		1FCECF432601387300C06370 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCECF422601387300C06370 /* SceneDelegate.swift */; };
 		1FCECF4A2601387600C06370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCECF492601387600C06370 /* Assets.xcassets */; };
@@ -167,6 +168,7 @@
 		1F9599BD26075D2000C02B2C /* MainTabViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewDelegateProtocol.swift; sourceTree = "<group>"; };
 		1F9599D42607DF8800C02B2C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		1F9599DF2607E03700C02B2C /* MainTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerTests.swift; sourceTree = "<group>"; };
+		1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetCell.swift; sourceTree = "<group>"; };
 		1FCECF3D2601387300C06370 /* MiFaena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiFaena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCECF402601387300C06370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCECF422601387300C06370 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 			children = (
 				1F6786B526028D9600662A18 /* GlobalConstants.swift */,
 				1F52D6A6260BC9B8008A4A9F /* DottedButtonsSheet.swift */,
+				1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */,
 				1F54F7C9260395CE005DC60D /* ActivityIndicator.swift */,
 				1F54F7D02603961C005DC60D /* Utils.swift */,
 				1F54F7CA260395CE005DC60D /* Extensions.swift */,
@@ -1136,6 +1139,7 @@
 				1FE280AA2604F60F00005970 /* SigninError.swift in Sources */,
 				1F9599D52607DF8800C02B2C /* MainTabBarController.swift in Sources */,
 				1F2C09932607492B000E690E /* MainTabValidatorProtocol.swift in Sources */,
+				1FB5B250260CBE12001BDE72 /* DottedButtonSheetCell.swift in Sources */,
 				1FEA609E2602191B00654538 /* SignupFormModel.swift in Sources */,
 				1F54F7D12603961C005DC60D /* Utils.swift in Sources */,
 				1F5A828126091B6600D90522 /* SupplierInvoiceSummariesPresenterProtocol.swift in Sources */,

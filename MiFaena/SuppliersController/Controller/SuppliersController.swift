@@ -18,7 +18,7 @@ class SuppliersController: UICollectionViewController {
     
     // MARK:- Properties
 
-var dottedButtonSheet:DottedButtonSheet!
+    var dottedButtonSheet:DottedButtonSheet!
     var user:User? {
         didSet {
             configureLeftBarButton()
@@ -120,8 +120,8 @@ extension SuppliersController:UICollectionViewDelegateFlowLayout {
 extension SuppliersController:SuppliersInvoiceCellDelegate {
     func showOptionsSheet(invoiceSummary: SuppliersInvSummary) {
         let dottedButtonsOptions = DottedButtonSheetOptions.suppliersDottedButton(suppInvSummary: invoiceSummary)
-        let dottedButton = DottedButtonSheet(options: dottedButtonsOptions)
-        dottedButton.show()
+        dottedButtonSheet = DottedButtonSheet(options: dottedButtonsOptions)
+        dottedButtonSheet.show()
     }
     
 }
