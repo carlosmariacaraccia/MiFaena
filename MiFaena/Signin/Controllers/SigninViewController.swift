@@ -129,8 +129,7 @@ extension SigninViewController: SigninViewDelegateProtocol {
         DispatchQueue.main.async {
             guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
             guard let tab = window.rootViewController as? MainTabBarController else { return }
-            tab.configureViewControllers()
-            tab.configureUI()
+            tab.mainTabBarControllerPresenter?.processIsUserSignedIn()
             self.spinnerViewController!.willMove(toParent: nil)
             self.spinnerViewController!.view.removeFromSuperview()
             self.spinnerViewController!.removeFromParent()
