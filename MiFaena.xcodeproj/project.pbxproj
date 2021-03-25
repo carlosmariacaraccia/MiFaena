@@ -51,6 +51,7 @@
 		1F6816B92607EAD0006D3C8A /* ProductionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6816B82607EAD0006D3C8A /* ProductionController.swift */; };
 		1F6816BE2607EADC006D3C8A /* CustomersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6816BD2607EADC006D3C8A /* CustomersController.swift */; };
 		1F6816C32607EAED006D3C8A /* SuppliersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6816C22607EAED006D3C8A /* SuppliersController.swift */; };
+		1F8408CF260D20B400FEC737 /* ReusableIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8408CE260D20B400FEC737 /* ReusableIdentifiers.swift */; };
 		1F85A5462603E9AA00307245 /* SignupPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A5452603E9AA00307245 /* SignupPresenterProtocol.swift */; };
 		1F85A54B2603EA5000307245 /* MockSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A54A2603EA5000307245 /* MockSignupPresenter.swift */; };
 		1F85A5532604AFA700307245 /* SignupError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A5522604AFA700307245 /* SignupError.swift */; };
@@ -161,6 +162,7 @@
 		1F6816B82607EAD0006D3C8A /* ProductionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionController.swift; sourceTree = "<group>"; };
 		1F6816BD2607EADC006D3C8A /* CustomersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomersController.swift; sourceTree = "<group>"; };
 		1F6816C22607EAED006D3C8A /* SuppliersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersController.swift; sourceTree = "<group>"; };
+		1F8408CE260D20B400FEC737 /* ReusableIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifiers.swift; sourceTree = "<group>"; };
 		1F85A5452603E9AA00307245 /* SignupPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterProtocol.swift; sourceTree = "<group>"; };
 		1F85A54A2603EA5000307245 /* MockSignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignupPresenter.swift; sourceTree = "<group>"; };
 		1F85A5522604AFA700307245 /* SignupError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupError.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				1F6786B526028D9600662A18 /* GlobalConstants.swift */,
+				1F8408CE260D20B400FEC737 /* ReusableIdentifiers.swift */,
 				1F54F7C9260395CE005DC60D /* ActivityIndicator.swift */,
 				1F54F7D02603961C005DC60D /* Utils.swift */,
 				1F54F7CA260395CE005DC60D /* Extensions.swift */,
@@ -1181,6 +1184,7 @@
 				1F3D9770260631A400D65153 /* MainTabPresenter.swift in Sources */,
 				1F52D69C260B3C25008A4A9F /* InvoiceSummaryCell.swift in Sources */,
 				1FE280C2260517F000005970 /* SigninWebServiceProtocol.swift in Sources */,
+				1F8408CF260D20B400FEC737 /* ReusableIdentifiers.swift in Sources */,
 				1F6816B42607EAC5006D3C8A /* ResultsController.swift in Sources */,
 				1F3D97642606216400D65153 /* MainTabWebService.swift in Sources */,
 				1F6786B626028D9600662A18 /* GlobalConstants.swift in Sources */,

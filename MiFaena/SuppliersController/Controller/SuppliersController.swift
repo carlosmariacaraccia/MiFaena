@@ -9,10 +9,6 @@ import UIKit
 import Firebase
 import SDWebImage
 
-struct ReusableIdentifiers {
-    static let suppliersControlller = "suppliersControllerReuseIdentifier"
-    static let dottedButtonReuseIdentifier = "dottedNumberReuseIdentifier"
-}
 
 class SuppliersController: UICollectionViewController {
     
@@ -95,6 +91,8 @@ extension SuppliersController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReusableIdentifiers.suppliersControlller, for: indexPath) as! InvoiceSummaryCell
         
+        // TODO: Add a view model to change the size of the invoice summary description height according to its space  availability to be drawn.
+        
         guard let invoicesSummaries = supplierInvoiceSummaries else { return UICollectionViewCell() }
         let invoiceSummary = invoicesSummaries[indexPath.row]
         cell.invoiceSummary = invoiceSummary
@@ -106,6 +104,7 @@ extension SuppliersController {
         return cell
     }
     
+    // TODO: Add a the didSelectItem at indexPath to show a detailed view of the suppliers invoice. Also I have to create a new controller it. It will nee to be done with MPV because we will need a Firebase request. It should be tested with unit test and uitest. The idel would be to do it with tdd.
 }
 
 
@@ -125,4 +124,5 @@ extension SuppliersController:SuppliersInvoiceCellDelegate {
     }
     
 }
+
 
