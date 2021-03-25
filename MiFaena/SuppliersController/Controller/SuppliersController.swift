@@ -18,7 +18,7 @@ class SuppliersController: UICollectionViewController {
     
     // MARK:- Properties
 
-    var dottedButtonSheet:DottedButtonSheet!
+var dottedButtonSheet:DottedButtonSheet!
     var user:User? {
         didSet {
             configureLeftBarButton()
