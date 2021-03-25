@@ -61,6 +61,8 @@
 		1F9599D52607DF8800C02B2C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599D42607DF8800C02B2C /* MainTabBarController.swift */; };
 		1F9599E02607E03700C02B2C /* MainTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599DF2607E03700C02B2C /* MainTabBarControllerTests.swift */; };
 		1FB5B250260CBE12001BDE72 /* DottedButtonSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */; };
+		1FB5B25B260D0B06001BDE72 /* DottedButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5B25A260D0B06001BDE72 /* DottedButtonViewModel.swift */; };
+		1FB5B260260D0B42001BDE72 /* DottedButtonSheetOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5B25F260D0B42001BDE72 /* DottedButtonSheetOptions.swift */; };
 		1FCECF412601387300C06370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCECF402601387300C06370 /* AppDelegate.swift */; };
 		1FCECF432601387300C06370 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCECF422601387300C06370 /* SceneDelegate.swift */; };
 		1FCECF4A2601387600C06370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCECF492601387600C06370 /* Assets.xcassets */; };
@@ -169,6 +171,8 @@
 		1F9599D42607DF8800C02B2C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		1F9599DF2607E03700C02B2C /* MainTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerTests.swift; sourceTree = "<group>"; };
 		1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetCell.swift; sourceTree = "<group>"; };
+		1FB5B25A260D0B06001BDE72 /* DottedButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonViewModel.swift; sourceTree = "<group>"; };
+		1FB5B25F260D0B42001BDE72 /* DottedButtonSheetOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetOptions.swift; sourceTree = "<group>"; };
 		1FCECF3D2601387300C06370 /* MiFaena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiFaena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCECF402601387300C06370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCECF422601387300C06370 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -415,8 +419,6 @@
 			isa = PBXGroup;
 			children = (
 				1F6786B526028D9600662A18 /* GlobalConstants.swift */,
-				1F52D6A6260BC9B8008A4A9F /* DottedButtonsSheet.swift */,
-				1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */,
 				1F54F7C9260395CE005DC60D /* ActivityIndicator.swift */,
 				1F54F7D02603961C005DC60D /* Utils.swift */,
 				1F54F7CA260395CE005DC60D /* Extensions.swift */,
@@ -605,6 +607,17 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		1FB5B265260D0B78001BDE72 /* DottedButtonSheet */ = {
+			isa = PBXGroup;
+			children = (
+				1F52D6A6260BC9B8008A4A9F /* DottedButtonsSheet.swift */,
+				1FB5B25F260D0B42001BDE72 /* DottedButtonSheetOptions.swift */,
+				1FB5B25A260D0B06001BDE72 /* DottedButtonViewModel.swift */,
+				1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */,
+			);
+			path = DottedButtonSheet;
+			sourceTree = "<group>";
+		};
 		1FC08B532604D7FE00631263 /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,6 +700,7 @@
 			children = (
 				1FCECF402601387300C06370 /* AppDelegate.swift */,
 				1FCECF422601387300C06370 /* SceneDelegate.swift */,
+				1FB5B265260D0B78001BDE72 /* DottedButtonSheet */,
 				1F4F88A22608107A0069E478 /* SuppliersInvoiceController */,
 				1F6816A52607E9DC006D3C8A /* MiscellaneousController */,
 				1F6816A42607E9D1006D3C8A /* ResultsController */,
@@ -1155,6 +1169,7 @@
 				1F6816AC2607EAB8006D3C8A /* MiscellaneousController.swift in Sources */,
 				1F5A822D2608C5D400D90522 /* SuppliersInvoiceSummariesWebService.swift in Sources */,
 				1F5A824B2608F5DE00D90522 /* SuppliersInvoiceSummiersPresenter.swift in Sources */,
+				1FB5B25B260D0B06001BDE72 /* DottedButtonViewModel.swift in Sources */,
 				1FE2808A2604E11500005970 /* SigninFormModelValidator.swift in Sources */,
 				1F5A825D2608F6E600D90522 /* SuppliersInvoiceSummariesWebServiceProtocol.swift in Sources */,
 				1F5A826E2608FD8700D90522 /* SuppliersInvoiceSummariesViewDelegateProtocol.swift in Sources */,
@@ -1169,6 +1184,7 @@
 				1F6816B42607EAC5006D3C8A /* ResultsController.swift in Sources */,
 				1F3D97642606216400D65153 /* MainTabWebService.swift in Sources */,
 				1F6786B626028D9600662A18 /* GlobalConstants.swift in Sources */,
+				1FB5B260260D0B42001BDE72 /* DottedButtonSheetOptions.swift in Sources */,
 				1FF1F9392607F6850010291B /* MainTabBarControllerPresenterProtocol.swift in Sources */,
 				1F45443F2603B0B800CD05D7 /* SignupViewController.swift in Sources */,
 				1F9599B42607512D00C02B2C /* MainTabWebServiceProtocol.swift in Sources */,
