@@ -8,33 +8,12 @@
 import UIKit
  
 
-enum DottedButtonSheetOptions {
-    
-    case suppliersDottedButton (suppInvSummary: SuppliersInvSummary)
-    
-    var objectPassed:AnyObject? {
-        switch self {
-        case .suppliersDottedButton(suppInvSummary: let  suppInvSummary):
-            return suppInvSummary as AnyObject
-        }
-    }
-}
-
-struct DottedButtonSheetViewModel {
-    
-    private let dottedButtonSheetOptions:DottedButtonSheet
-    
-    init(dottedButtonSheetOptions:DottedButtonSheet) {
-        self.dottedButtonSheetOptions = dottedButtonSheetOptions
-    }
-    
-}
-
 class DottedButtonSheet:NSObject {
     
     private let options:DottedButtonSheetOptions
     private let tableView = UITableView()
     private var window:UIWindow?
+    private lazy var viewModel = DottedButtonSheetViewModel(dottedButtonSheetOptions: options)
     
     private lazy var backgroundView:UIView = {
         let view = UIView()
@@ -44,7 +23,7 @@ class DottedButtonSheet:NSObject {
         view.addGestureRecognizer(tap)
         return view
     }()
-    
+
     private lazy var cancelButton:UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Cancel", for: .normal)
@@ -90,23 +69,22 @@ class DottedButtonSheet:NSObject {
     }
     
     func show() {
+        
         guard let x = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return }
         self.window = x
-
         window!.addSubview(backgroundView)
         backgroundView.frame = window!.frame
         backgroundView.isUserInteractionEnabled = true
         
-        
-        //guard let suppInvSummaryPassed = options.objectPassed as? SuppliersInvSummary else { return }
         window!.addSubview(tableView)
-        let height = CGFloat(3*60) + 100
-        tableView.frame = CGRect(x: 0, y: window!.frame.height, width: window!.frame.width, height: height)
-        
-        // show the added view
-        UIView.animate(withDuration:0.5) {
-            self.backgroundView.alpha = 1
-            self.tableView.frame.origin.y -= height
+        if let cellsQuantity = viewModel.descriptions?.count {
+            let height = CGFloat(cellsQuantity * 60) + 100
+            tableView.frame = CGRect(x: 0, y: window!.frame.height, width: window!.frame.width, height: height)
+            // show the added view
+            UIView.animate(withDuration:0.5) {
+                self.backgroundView.alpha = 1
+                self.tableView.frame.origin.y -= height
+            }
         }
     }
 }
@@ -115,11 +93,15 @@ class DottedButtonSheet:NSObject {
 extension DottedButtonSheet: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        guard let times = viewModel.descriptions?.count else { return 0 }
+        return times
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ReusableIdentifiers.dottedButtonReuseIdentifier, for: indexPath)
+        let possibleCell  = tableView.dequeueReusableCell(withIdentifier: ReusableIdentifiers.dottedButtonReuseIdentifier, for: indexPath) as? DottedButtonSheetCell
+        guard let cell = possibleCell else { return UITableViewCell() }
+        cell.cellLabel.text = viewModel.descriptions![indexPath.row]
+        cell.imView.image = viewModel.images![indexPath.row]
         return cell
     }
 }
@@ -132,6 +114,11 @@ extension DottedButtonSheet: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         60
     }
+    
+    // TODO: add the didSelect row at indexPath to select a row and got to the view controller where I can select the payment options.
+    // TODO: add the necessary view controllers to achieve this goal, this will depend on the options, it will be treated with a switch.
+    // TODO: Create a view controller to process the payments.
+    // TODO: Change the cancel font of the footer view to an attributed string so it looks better. The font should be Avenir Next, the size should be 20 and the color .meattradered.
 }
 
 

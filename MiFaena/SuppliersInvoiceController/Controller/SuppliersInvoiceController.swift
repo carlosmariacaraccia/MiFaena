@@ -16,4 +16,10 @@ class SuppliersInvoiceController:UIViewController {
         
         view.backgroundColor = .green
     }
+    
+    // TODO: Add the navigation controller's items to the bar and to add the cancel button to dismiss the view.
+    // TODO: Add the a collection view controller to start the process.
+    // TODO: This all should be done using the MPV design patter because we need to test all the logic because this view controller will proceed with a network call.
+    // TODO: Add accessibility identifiers to further test this functionality with UITests.
+    
 }

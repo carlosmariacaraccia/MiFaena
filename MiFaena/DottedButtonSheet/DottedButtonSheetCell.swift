@@ -11,12 +11,11 @@ class DottedButtonSheetCell:UITableViewCell {
     
     // MARK:- Properties
     
+    
     lazy var imView:UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.image = #imageLiteral(resourceName: "invoice1").withRenderingMode(.alwaysTemplate)
-        iv.tintColor = .meatTradeRed
         return iv
     }()
     
@@ -24,7 +23,8 @@ class DottedButtonSheetCell:UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 0
-        label.text = "Some text"
+        label.font = UIFont(name: "Avenir Next DemiBold", size: 15)
+        label.textColor = UIColor.black.withAlphaComponent(0.6)
         return label
     }()
     
