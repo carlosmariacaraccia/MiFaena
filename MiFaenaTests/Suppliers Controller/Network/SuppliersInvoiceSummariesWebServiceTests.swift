@@ -21,6 +21,8 @@ class SupsInvsSumsWebServiceTests: XCTestCase {
 
     func testSupsInvsSumsWebService_WhenGetSuppliersSummaryInvoicesIsCalled_SuppliersSummaryInvoicesAreReturned() {
         let mockDatabaseReference = MockDatabaseReference()
+        let mockSnapShot = MockSnapshotSuppliersInvoicesSummary()
+        mockDatabaseReference.mockSnapShot = mockSnapShot
         let sut = SupsInvsSumsWebService(databaseReference: mockDatabaseReference)
         
         let myExpectation = expectation(description: "returnSuppliersInvoiceSummaries")

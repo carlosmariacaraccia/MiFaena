@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-protocol SelectSupplierWebServiceProtocol {
+protocol SelectSupplierWebServiceProtocol:AnyObject {
     
     
     init(databaseReference:DatabaseReference)

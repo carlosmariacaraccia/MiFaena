@@ -8,12 +8,12 @@
 import Foundation
 
 
-class SelectSupplierPresenter {
+class SelectSupplierPresenter:SelectSupplierPresenterProtocol {
     
     let selectSupplierWebService:SelectSupplierWebServiceProtocol
     let selectSupplierViewDelegate:SelectSupplierViewDelegateProtocol
     
-    init(selectSupplierWebService:SelectSupplierWebServiceProtocol, selectSupplierViewDelegate:SelectSupplierViewDelegateProtocol) {
+    required init(selectSupplierWebService:SelectSupplierWebServiceProtocol, selectSupplierViewDelegate:SelectSupplierViewDelegateProtocol) {
         self.selectSupplierWebService = selectSupplierWebService
         self.selectSupplierViewDelegate = selectSupplierViewDelegate
     }
@@ -24,6 +24,7 @@ class SelectSupplierPresenter {
                 self.selectSupplierViewDelegate.successfulFetchOfSuppliers(suppliers: suppliers)
             } else {
                 self.selectSupplierViewDelegate.errorFetchingSuppliers(error: NSError(domain: "", code: -1, userInfo: nil))
+                // TODO: Create an custom Error fetching firebase objects.
             }
         }
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol SelectSupplierViewDelegateProtocol {
+protocol SelectSupplierViewDelegateProtocol:AnyObject {
     
     func successfulFetchOfSuppliers(suppliers: [Supplier])
     func errorFetchingSuppliers(error:Error)

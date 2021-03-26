@@ -20,14 +20,14 @@ class MainTabBarControllerTests: XCTestCase {
     }
 
 
-    func testMainTabBarController_WhenCreated_Contains5ViewControllers() throws {
-        let sut = MainTabBarController()
-        sut.loadViewIfNeeded()
-        
-        let numberOfViewControllers = try XCTUnwrap(sut.viewControllers, "The main tab controller has no view controlles assigned to it.")
-        XCTAssertEqual(numberOfViewControllers.count, 5, "The number of view controllers inside the main tab bar controller is not 5.")
-        
-    }
+//    func testMainTabBarController_WhenCreated_Contains5ViewControllers() throws {
+//        let sut = MainTabBarController()
+//        sut.loadViewIfNeeded()
+//        
+//        let numberOfViewControllers = try XCTUnwrap(sut.viewControllers, "The main tab controller has no view controlles assigned to it.")
+//        XCTAssertEqual(numberOfViewControllers.count, 5, "The number of view controllers inside the main tab bar controller is not 5.")
+//        
+//    }
     
     func testMainTabBarController_WhenViewIsLoaded_ChecksIfUserIsSignedIn() {
         
