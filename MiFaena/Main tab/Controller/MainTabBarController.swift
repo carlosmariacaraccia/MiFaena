@@ -53,7 +53,8 @@ class MainTabBarController:UITabBarController {
     
     
     @objc func handleActionButtonTap() {
-        let suppliersInvoiceController = SuppliersInvoiceController()
+        let layout = UICollectionViewFlowLayout()
+        let suppliersInvoiceController = UploadSuppliersInvoiceController(collectionViewLayout: layout)
         let navCon = UINavigationController(rootViewController: suppliersInvoiceController)
         navCon.modalPresentationStyle = .fullScreen
         present(navCon, animated: true, completion: nil)

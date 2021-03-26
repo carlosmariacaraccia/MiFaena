@@ -16,12 +16,15 @@
 		1F2C09932607492B000E690E /* MainTabValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C09922607492B000E690E /* MainTabValidatorProtocol.swift */; };
 		1F2D7C6E260E512800C9F10E /* SelectSupplierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D7C6D260E512800C9F10E /* SelectSupplierViewModel.swift */; };
 		1F2D7C74260E54C900C9F10E /* SelectSupplierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D7C73260E54C900C9F10E /* SelectSupplierCell.swift */; };
+		1F2D7C80260E5B1B00C9F10E /* SuppliersUploadInvoiceGeneralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D7C7F260E5B1B00C9F10E /* SuppliersUploadInvoiceGeneralCell.swift */; };
+		1F2D7C88260E5B8300C9F10E /* SuppliersInvoiceDatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D7C85260E5B8200C9F10E /* SuppliersInvoiceDatesViewModel.swift */; };
+		1F2D7C8A260E5B8300C9F10E /* SuppliersInvoiceNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D7C87260E5B8300C9F10E /* SuppliersInvoiceNumberViewModel.swift */; };
 		1F3D97592606208700D65153 /* MainTabWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D97582606208700D65153 /* MainTabWebServiceTests.swift */; };
 		1F3D97642606216400D65153 /* MainTabWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D97632606216400D65153 /* MainTabWebService.swift */; };
 		1F3D976A260623BD00D65153 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D9769260623BD00D65153 /* User.swift */; };
 		1F3D9770260631A400D65153 /* MainTabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D976F260631A400D65153 /* MainTabPresenter.swift */; };
 		1F45443F2603B0B800CD05D7 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45443E2603B0B800CD05D7 /* SignupViewController.swift */; };
-		1F4F88A5260810B10069E478 /* SuppliersInvoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F88A4260810B10069E478 /* SuppliersInvoiceController.swift */; };
+		1F4F88A5260810B10069E478 /* UploadSuppliersInvoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F88A4260810B10069E478 /* UploadSuppliersInvoiceController.swift */; };
 		1F4F88B82608C27E0069E478 /* SuppliersInvoiceSummariesWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4F88B72608C27E0069E478 /* SuppliersInvoiceSummariesWebServiceTests.swift */; };
 		1F52D69C260B3C25008A4A9F /* InvoiceSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52D69B260B3C25008A4A9F /* InvoiceSummaryCell.swift */; };
 		1F52D6A7260BC9B8008A4A9F /* DottedButtonsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F52D6A6260BC9B8008A4A9F /* DottedButtonsSheet.swift */; };
@@ -69,6 +72,13 @@
 		1F9599BE26075D2000C02B2C /* MainTabViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599BD26075D2000C02B2C /* MainTabViewDelegateProtocol.swift */; };
 		1F9599D52607DF8800C02B2C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599D42607DF8800C02B2C /* MainTabBarController.swift */; };
 		1F9599E02607E03700C02B2C /* MainTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9599DF2607E03700C02B2C /* MainTabBarControllerTests.swift */; };
+		1FA5743F260E60B80057343A /* SuppliersSupplierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5743E260E60B80057343A /* SuppliersSupplierViewModel.swift */; };
+		1FA57458260E62230057343A /* InputInvoiceNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57457260E62230057343A /* InputInvoiceNumberController.swift */; };
+		1FA5745E260E629F0057343A /* SuppliersInvoiceNumberError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5745D260E629F0057343A /* SuppliersInvoiceNumberError.swift */; };
+		1FA57466260E62C80057343A /* InvoiceNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57465260E62C80057343A /* InvoiceNumberValidator.swift */; };
+		1FA5746D260E642F0057343A /* SuppliersInvoiceDatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5746C260E642F0057343A /* SuppliersInvoiceDatesController.swift */; };
+		1FA57476260E64A50057343A /* SuppliersInvoiceDatesValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA57475260E64A50057343A /* SuppliersInvoiceDatesValidator.swift */; };
+		1FA5747B260E64CB0057343A /* SuppliersInvoiceDateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5747A260E64CB0057343A /* SuppliersInvoiceDateError.swift */; };
 		1FB5B250260CBE12001BDE72 /* DottedButtonSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */; };
 		1FB5B25B260D0B06001BDE72 /* DottedButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5B25A260D0B06001BDE72 /* DottedButtonViewModel.swift */; };
 		1FB5B260260D0B42001BDE72 /* DottedButtonSheetOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB5B25F260D0B42001BDE72 /* DottedButtonSheetOptions.swift */; };
@@ -145,12 +155,15 @@
 		1F2C09922607492B000E690E /* MainTabValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabValidatorProtocol.swift; sourceTree = "<group>"; };
 		1F2D7C6D260E512800C9F10E /* SelectSupplierViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSupplierViewModel.swift; sourceTree = "<group>"; };
 		1F2D7C73260E54C900C9F10E /* SelectSupplierCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSupplierCell.swift; sourceTree = "<group>"; };
+		1F2D7C7F260E5B1B00C9F10E /* SuppliersUploadInvoiceGeneralCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuppliersUploadInvoiceGeneralCell.swift; sourceTree = "<group>"; };
+		1F2D7C85260E5B8200C9F10E /* SuppliersInvoiceDatesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceDatesViewModel.swift; sourceTree = "<group>"; };
+		1F2D7C87260E5B8300C9F10E /* SuppliersInvoiceNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceNumberViewModel.swift; sourceTree = "<group>"; };
 		1F3D97582606208700D65153 /* MainTabWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabWebServiceTests.swift; sourceTree = "<group>"; };
 		1F3D97632606216400D65153 /* MainTabWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabWebService.swift; sourceTree = "<group>"; };
 		1F3D9769260623BD00D65153 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1F3D976F260631A400D65153 /* MainTabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPresenter.swift; sourceTree = "<group>"; };
 		1F45443E2603B0B800CD05D7 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		1F4F88A4260810B10069E478 /* SuppliersInvoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceController.swift; sourceTree = "<group>"; };
+		1F4F88A4260810B10069E478 /* UploadSuppliersInvoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadSuppliersInvoiceController.swift; sourceTree = "<group>"; };
 		1F4F88B72608C27E0069E478 /* SuppliersInvoiceSummariesWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceSummariesWebServiceTests.swift; sourceTree = "<group>"; };
 		1F52D69B260B3C25008A4A9F /* InvoiceSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSummaryCell.swift; sourceTree = "<group>"; };
 		1F52D6A6260BC9B8008A4A9F /* DottedButtonsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonsSheet.swift; sourceTree = "<group>"; };
@@ -198,6 +211,13 @@
 		1F9599BD26075D2000C02B2C /* MainTabViewDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewDelegateProtocol.swift; sourceTree = "<group>"; };
 		1F9599D42607DF8800C02B2C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		1F9599DF2607E03700C02B2C /* MainTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarControllerTests.swift; sourceTree = "<group>"; };
+		1FA5743E260E60B80057343A /* SuppliersSupplierViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersSupplierViewModel.swift; sourceTree = "<group>"; };
+		1FA57457260E62230057343A /* InputInvoiceNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputInvoiceNumberController.swift; sourceTree = "<group>"; };
+		1FA5745D260E629F0057343A /* SuppliersInvoiceNumberError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceNumberError.swift; sourceTree = "<group>"; };
+		1FA57465260E62C80057343A /* InvoiceNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceNumberValidator.swift; sourceTree = "<group>"; };
+		1FA5746C260E642F0057343A /* SuppliersInvoiceDatesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceDatesController.swift; sourceTree = "<group>"; };
+		1FA57475260E64A50057343A /* SuppliersInvoiceDatesValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceDatesValidator.swift; sourceTree = "<group>"; };
+		1FA5747A260E64CB0057343A /* SuppliersInvoiceDateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersInvoiceDateError.swift; sourceTree = "<group>"; };
 		1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetCell.swift; sourceTree = "<group>"; };
 		1FB5B25A260D0B06001BDE72 /* DottedButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonViewModel.swift; sourceTree = "<group>"; };
 		1FB5B25F260D0B42001BDE72 /* DottedButtonSheetOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetOptions.swift; sourceTree = "<group>"; };
@@ -321,6 +341,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1F2D7C7E260E5ABF00C9F10E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F2D7C7F260E5B1B00C9F10E /* SuppliersUploadInvoiceGeneralCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F2D7C84260E5B3A00C9F10E /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				1F2D7C85260E5B8200C9F10E /* SuppliersInvoiceDatesViewModel.swift */,
+				1FA5743E260E60B80057343A /* SuppliersSupplierViewModel.swift */,
+				1F2D7C87260E5B8300C9F10E /* SuppliersInvoiceNumberViewModel.swift */,
+			);
+			path = "View models";
+			sourceTree = "<group>";
+		};
 		1F3D973E2605F6B900D65153 /* Main Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,18 +462,20 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		1F4F88A22608107A0069E478 /* Suppliers invoice controller */ = {
+		1F4F88A22608107A0069E478 /* Upload suppliers invoice controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F2D7C84260E5B3A00C9F10E /* View models */,
+				1F2D7C7E260E5ABF00C9F10E /* View */,
 				1F4F88A3260810950069E478 /* Controller */,
 			);
-			path = "Suppliers invoice controller";
+			path = "Upload suppliers invoice controller";
 			sourceTree = "<group>";
 		};
 		1F4F88A3260810950069E478 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1F4F88A4260810B10069E478 /* SuppliersInvoiceController.swift */,
+				1F4F88A4260810B10069E478 /* UploadSuppliersInvoiceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -590,7 +630,7 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
-		1F6816A12607E98D006D3C8A /* Suppliers controller */ = {
+		1F6816A12607E98D006D3C8A /* Suppliers */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816AA2607EA0D006D3C8A /* Controller */,
@@ -600,39 +640,39 @@
 				1F5A82312608C6D100D90522 /* Model */,
 				1F5A822B2608C5BA00D90522 /* Network */,
 			);
-			path = "Suppliers controller";
+			path = Suppliers;
 			sourceTree = "<group>";
 		};
-		1F6816A22607E997006D3C8A /* Customers controller */ = {
+		1F6816A22607E997006D3C8A /* Customers */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816A92607EA07006D3C8A /* Controller */,
 			);
-			path = "Customers controller";
+			path = Customers;
 			sourceTree = "<group>";
 		};
-		1F6816A32607E9BB006D3C8A /* Production controller */ = {
+		1F6816A32607E9BB006D3C8A /* Production */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816A82607EA02006D3C8A /* Controller */,
 			);
-			path = "Production controller";
+			path = Production;
 			sourceTree = "<group>";
 		};
-		1F6816A42607E9D1006D3C8A /* Results controller */ = {
+		1F6816A42607E9D1006D3C8A /* Results */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816A72607E9FC006D3C8A /* Controller */,
 			);
-			path = "Results controller";
+			path = Results;
 			sourceTree = "<group>";
 		};
-		1F6816A52607E9DC006D3C8A /* Miscellaneous controller */ = {
+		1F6816A52607E9DC006D3C8A /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816A62607E9F4006D3C8A /* Controller */,
 			);
-			path = "Miscellaneous controller";
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 		1F6816A62607E9F4006D3C8A /* Controller */ = {
@@ -702,7 +742,7 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		1F8408DE260DD03300FEC737 /* Select Supplier */ = {
+		1F8408DE260DD03300FEC737 /* Select supplier */ = {
 			isa = PBXGroup;
 			children = (
 				1F2D7C72260E54A100C9F10E /* View */,
@@ -713,7 +753,7 @@
 				1F0E8AE4260DD3A50068CCE5 /* Model */,
 				1F8408EE260DD09600FEC737 /* Web service */,
 			);
-			path = "Select Supplier";
+			path = "Select supplier";
 			sourceTree = "<group>";
 		};
 		1F8408EE260DD09600FEC737 /* Web service */ = {
@@ -730,6 +770,58 @@
 				1F9599D42607DF8800C02B2C /* MainTabBarController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		1FA57446260E619D0057343A /* Input supplier invoice number */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5745C260E62750057343A /* Model */,
+				1FA57456260E61F10057343A /* Controller */,
+			);
+			path = "Input supplier invoice number";
+			sourceTree = "<group>";
+		};
+		1FA57456260E61F10057343A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FA57457260E62230057343A /* InputInvoiceNumberController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1FA5745C260E62750057343A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5745D260E629F0057343A /* SuppliersInvoiceNumberError.swift */,
+				1FA57465260E62C80057343A /* InvoiceNumberValidator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FA5746A260E63C20057343A /* Input suppliers invoice date */ = {
+			isa = PBXGroup;
+			children = (
+				1FA57471260E64670057343A /* Model */,
+				1FA5746B260E63E90057343A /* Controller */,
+			);
+			path = "Input suppliers invoice date";
+			sourceTree = "<group>";
+		};
+		1FA5746B260E63E90057343A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FA5746C260E642F0057343A /* SuppliersInvoiceDatesController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1FA57471260E64670057343A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FA57475260E64A50057343A /* SuppliersInvoiceDatesValidator.swift */,
+				1FA5747A260E64CB0057343A /* SuppliersInvoiceDateError.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1FB5B265260D0B78001BDE72 /* Dotted button sheet */ = {
@@ -825,13 +917,15 @@
 			children = (
 				1FCECF402601387300C06370 /* AppDelegate.swift */,
 				1FCECF422601387300C06370 /* SceneDelegate.swift */,
-				1F8408DE260DD03300FEC737 /* Select Supplier */,
-				1F4F88A22608107A0069E478 /* Suppliers invoice controller */,
-				1F6816A52607E9DC006D3C8A /* Miscellaneous controller */,
-				1F6816A42607E9D1006D3C8A /* Results controller */,
-				1F6816A32607E9BB006D3C8A /* Production controller */,
-				1F6816A22607E997006D3C8A /* Customers controller */,
-				1F6816A12607E98D006D3C8A /* Suppliers controller */,
+				1FA5746A260E63C20057343A /* Input suppliers invoice date */,
+				1FA57446260E619D0057343A /* Input supplier invoice number */,
+				1F8408DE260DD03300FEC737 /* Select supplier */,
+				1F4F88A22608107A0069E478 /* Upload suppliers invoice controller */,
+				1F6816A52607E9DC006D3C8A /* Miscellaneous */,
+				1F6816A42607E9D1006D3C8A /* Results */,
+				1F6816A32607E9BB006D3C8A /* Production */,
+				1F6816A22607E997006D3C8A /* Customers */,
+				1F6816A12607E98D006D3C8A /* Suppliers */,
 				1F3D97612606214300D65153 /* Main tab */,
 				1FE280872604E0AE00005970 /* Signin */,
 				1FEA60A526021F8900654538 /* Signup */,
@@ -1322,17 +1416,21 @@
 				1F6816B92607EAD0006D3C8A /* ProductionController.swift in Sources */,
 				1FE280AA2604F60F00005970 /* SigninError.swift in Sources */,
 				1F9599D52607DF8800C02B2C /* MainTabBarController.swift in Sources */,
+				1FA5747B260E64CB0057343A /* SuppliersInvoiceDateError.swift in Sources */,
 				1F2C09932607492B000E690E /* MainTabValidatorProtocol.swift in Sources */,
 				1FB5B250260CBE12001BDE72 /* DottedButtonSheetCell.swift in Sources */,
+				1FA57466260E62C80057343A /* InvoiceNumberValidator.swift in Sources */,
 				1FEA609E2602191B00654538 /* SignupFormModel.swift in Sources */,
 				1F54F7D12603961C005DC60D /* Utils.swift in Sources */,
 				1F5A828126091B6600D90522 /* SupplierInvoiceSummariesPresenterProtocol.swift in Sources */,
 				1FE280EC260539F600005970 /* SigninPresenterProtocol.swift in Sources */,
 				1F54F7C126036359005DC60D /* SignupViewDelegateProtocol.swift in Sources */,
-				1F4F88A5260810B10069E478 /* SuppliersInvoiceController.swift in Sources */,
+				1F4F88A5260810B10069E478 /* UploadSuppliersInvoiceController.swift in Sources */,
 				1F54F7CB260395CE005DC60D /* ActivityIndicator.swift in Sources */,
 				1F52D6A7260BC9B8008A4A9F /* DottedButtonsSheet.swift in Sources */,
+				1F2D7C88260E5B8300C9F10E /* SuppliersInvoiceDatesViewModel.swift in Sources */,
 				1F2D7C6E260E512800C9F10E /* SelectSupplierViewModel.swift in Sources */,
+				1FA57476260E64A50057343A /* SuppliersInvoiceDatesValidator.swift in Sources */,
 				1FE280902604E50D00005970 /* SigninFormModelValidatorProtocol.swift in Sources */,
 				1FE280A02604F17200005970 /* SigninWebService.swift in Sources */,
 				1FE280B8260507D800005970 /* SigninPresenter.swift in Sources */,
@@ -1340,12 +1438,15 @@
 				1FEA2554260E05C500CDE25C /* SelectSupplierPresenter.swift in Sources */,
 				1FEA2565260E062900CDE25C /* SelectSupplierWebServiceProtocol.swift in Sources */,
 				1F6816AC2607EAB8006D3C8A /* MiscellaneousController.swift in Sources */,
+				1F2D7C80260E5B1B00C9F10E /* SuppliersUploadInvoiceGeneralCell.swift in Sources */,
+				1FA57458260E62230057343A /* InputInvoiceNumberController.swift in Sources */,
 				1F5A822D2608C5D400D90522 /* SuppliersInvoiceSummariesWebService.swift in Sources */,
 				1F5A824B2608F5DE00D90522 /* SuppliersInvoiceSummiersPresenter.swift in Sources */,
 				1FB5B25B260D0B06001BDE72 /* DottedButtonViewModel.swift in Sources */,
 				1FE2808A2604E11500005970 /* SigninFormModelValidator.swift in Sources */,
 				1F5A825D2608F6E600D90522 /* SuppliersInvoiceSummariesWebServiceProtocol.swift in Sources */,
 				1F5A826E2608FD8700D90522 /* SuppliersInvoiceSummariesViewDelegateProtocol.swift in Sources */,
+				1FA5745E260E629F0057343A /* SuppliersInvoiceNumberError.swift in Sources */,
 				1FCECF412601387300C06370 /* AppDelegate.swift in Sources */,
 				1F6786D0260298E800662A18 /* SignupModelValidatorProtocol.swift in Sources */,
 				1FEA256A260E06B300CDE25C /* SelectSupplierViewDelegateProtocol.swift in Sources */,
@@ -1364,10 +1465,13 @@
 				1F6786B626028D9600662A18 /* GlobalConstants.swift in Sources */,
 				1FB5B260260D0B42001BDE72 /* DottedButtonSheetOptions.swift in Sources */,
 				1FF1F9392607F6850010291B /* MainTabBarControllerPresenterProtocol.swift in Sources */,
+				1FA5743F260E60B80057343A /* SuppliersSupplierViewModel.swift in Sources */,
 				1F45443F2603B0B800CD05D7 /* SignupViewController.swift in Sources */,
+				1FA5746D260E642F0057343A /* SuppliersInvoiceDatesController.swift in Sources */,
 				1FEA2581260E1FB100CDE25C /* SelectSupplierController.swift in Sources */,
 				1F9599B42607512D00C02B2C /* MainTabWebServiceProtocol.swift in Sources */,
 				1F3D976A260623BD00D65153 /* User.swift in Sources */,
+				1F2D7C8A260E5B8300C9F10E /* SuppliersInvoiceNumberViewModel.swift in Sources */,
 				1F6ADE67260E27BD009317F9 /* SelectSupplierPresenterProtocol.swift in Sources */,
 				1F54F7CC260395CE005DC60D /* Extensions.swift in Sources */,
 				1FE280D22605273900005970 /* SigninViewController.swift in Sources */,

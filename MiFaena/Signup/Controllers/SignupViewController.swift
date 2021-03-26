@@ -184,7 +184,7 @@ class SignupViewController: UIViewController {
     
     
     @objc func handleRegistration() {
-        
+        makeSpinnerBegginSpinning()
         let email = secureTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         let userName = userNameTextField.text ?? ""
@@ -194,7 +194,6 @@ class SignupViewController: UIViewController {
         let signupFormModel = SignupFormModel(email: email, password: password, userName: userName,
                                               fullName: fullName, profileImageData: imageData)
         
-        makeSpinnerBegginSpinning()
         signupPresenter?.processUserSignup(formModel: signupFormModel)
     }
 }
@@ -226,8 +225,7 @@ extension SignupViewController: SignupViewDelegateProtocol {
         DispatchQueue.main.async {
             guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
             guard let tab = window.rootViewController as? MainTabBarController else { return }
-            tab.configureViewControllers()
-            tab.configureUI()
+            tab.mainTabBarControllerPresenter?.processIsUserSignedIn()
             self.spinnerController!.willMove(toParent: nil)
             self.spinnerController!.view.removeFromSuperview()
             self.spinnerController!.removeFromParent()
