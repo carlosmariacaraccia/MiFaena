@@ -14,7 +14,9 @@ class MockSelectSupplierViewDelegate:SelectSupplierViewDelegateProtocol {
     var expectation:XCTestExpectation?
     
     func successfulFetchOfSuppliers(suppliers: [Supplier]) {
+        print(suppliers)
         expectation?.fulfill()
+        
     }
     
     func errorFetchingSuppliers(error: Error) {

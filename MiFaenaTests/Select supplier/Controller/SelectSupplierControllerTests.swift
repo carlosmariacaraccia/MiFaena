@@ -45,5 +45,5 @@ class SelectSupplierControllerTests: XCTestCase {
         XCTAssertTrue(mockPresenter.isFetchSuppliersCalled, "The fetchSuppliers() method was not called.")
         
     }
-
+    
 }

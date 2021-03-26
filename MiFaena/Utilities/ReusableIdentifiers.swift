@@ -10,5 +10,6 @@ import Foundation
 struct ReusableIdentifiers {
     static let suppliersControlller = "suppliersControllerReuseIdentifier"
     static let dottedButtonReuseIdentifier = "dottedNumberReuseIdentifier"
+    static let selectSupplier = "selectSupplierReuseIdentifier"
 }
 

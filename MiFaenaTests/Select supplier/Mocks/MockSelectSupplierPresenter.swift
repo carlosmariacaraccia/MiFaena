@@ -12,13 +12,24 @@ import Foundation
 class MockSelectSupplierPresenter:SelectSupplierPresenterProtocol {
     
     var isFetchSuppliersCalled:Bool = false
+    var retrievedSuppliers:[Supplier]?
     
+    let webService: SelectSupplierWebServiceProtocol
+    let viewDelegate: SelectSupplierViewDelegateProtocol
+        
     required init(selectSupplierWebService: SelectSupplierWebServiceProtocol, selectSupplierViewDelegate: SelectSupplierViewDelegateProtocol) {
         
+        self.webService = selectSupplierWebService
+        self.viewDelegate = selectSupplierViewDelegate
     }
     
     func fetchSuppliers() {
         isFetchSuppliersCalled = true
+        
+        if let suppliers = retrievedSuppliers {
+            
+            viewDelegate.successfulFetchOfSuppliers(suppliers: suppliers)
+        }
     }
     
     
