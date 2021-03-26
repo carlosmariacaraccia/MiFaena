@@ -27,11 +27,11 @@ class SelectSupplierWebService {
             self.fetchSupplier(withId: supplierId) { supplier in
                 if let supplier = supplier {
                     suppliers.append(supplier)
+                    completionHandler(suppliers)
                 } else {
                     completionHandler(nil)
                 }
             }
-            completionHandler(suppliers)
         }
     }
     
