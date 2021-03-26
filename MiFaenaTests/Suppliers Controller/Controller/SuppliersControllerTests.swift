@@ -31,16 +31,17 @@ class SuppliersControllerTests: XCTestCase {
     func testSuppliersController_WhenInitialized_CallsFetchInvoiceSummariesOnPresneter() {
         
         let layout = UICollectionViewFlowLayout()
-        let sut = SuppliersController(collectionViewLayout: layout)
-        sut.loadViewIfNeeded()
         let mockDatabaseReference = MockDatabaseReference()
         let mockWebService = MockSuppliersInvoiceSummariesWebService(databaseReference: mockDatabaseReference)
         let mockDelegate = MockSuppliersInvoiceSummeriesViewDelegate()
         let mockPresenter = MockSupplierInvoiceSummariesPresenter(supplierInvoiceSummariesWebService: mockWebService, supplierInvoiceSummariesViewDelegate: mockDelegate)
+        let dict = ["userName":"Dalai", "email":"test@test.com", "fullName":"Dalai lama", "profileImageUrl":"https://www.dalaiLama.com"] as [String:AnyObject]
+        let user = User(uid: "asdfadsf", dictionary: dict)
+        let sut = SuppliersController(collectionViewLayout: layout)
         sut.presenter = mockPresenter
-        
-        mockPresenter.processFetchSupplierInvoiceSummaries()
-        
+        sut.user = user
+        sut.loadViewIfNeeded()
+
         XCTAssertTrue(mockPresenter.processFetchSupInvSumsIsCalled, "The fetchSupplierInvoiceSummaries() should be called but it was not.")
         
     }

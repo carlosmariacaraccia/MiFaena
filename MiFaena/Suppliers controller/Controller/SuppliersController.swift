@@ -22,6 +22,8 @@ class SuppliersController: UICollectionViewController {
                 let webService = SupsInvsSumsWebService(databaseReference: Database.database().reference())
                 presenter = SuppliersInvoiceSummiersPresenter(supplierInvoiceSummariesWebService: webService, supplierInvoiceSummariesViewDelegate: self)
                 presenter?.processFetchSupplierInvoiceSummaries()
+            } else {
+                presenter?.processFetchSupplierInvoiceSummaries()
             }
         }
     }
