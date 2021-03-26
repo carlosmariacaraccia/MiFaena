@@ -9,11 +9,11 @@ import Foundation
 import Firebase
 
 
-class SelectSupplierWebService {
+class SelectSupplierWebService:SelectSupplierWebServiceProtocol {
     
     private let databaseReference:DatabaseReference
     
-    init(databaseReference:DatabaseReference) {
+    required init(databaseReference:DatabaseReference) {
         self.databaseReference = databaseReference
     }
     
