@@ -8,36 +8,17 @@
 import Foundation
 import Firebase
 
-class MockDalaiLama {
-    
-}
-
-enum FirebaseMockSnapshots {
-    
-    case suppliersInvoiceSummaries(mock: MockSnapshotSuppliersInvoicesSummary)
-    case xdd(mock:MockDalaiLama)
-    
-    var mock:AnyObject? {
-        
-        switch self {
-        case .suppliersInvoiceSummaries(mock: let mockObject):
-            return mockObject
-        case .xdd(mock: let dalaiLama):
-            return dalaiLama
-        }
-    }
-    
-}
 
 class MockDatabaseReference:DatabaseReference {
     
+    var mockSnapShot:DataSnapshot?
     
     override func child(_ pathString: String) -> DatabaseReference {
         self
     }
     
     override func observe(_ eventType: DataEventType, with block: @escaping (DataSnapshot) -> Void) -> UInt {
-        let snapshot = MockSnapshotSuppliersInvoicesSummary()
+        let snapshot = mockSnapShot!
         DispatchQueue.global().async {
             block(snapshot)
         }
@@ -45,7 +26,7 @@ class MockDatabaseReference:DatabaseReference {
     }
     
     override func observeSingleEvent(of eventType: DataEventType, with block: @escaping (DataSnapshot) -> Void) {
-        let snapshot = MockSnapshotSuppliersInvoicesSummary()
+        let snapshot = mockSnapShot!
         DispatchQueue.global().async {
             block(snapshot)
         }

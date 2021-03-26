@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0E8AE6260DD3B10068CCE5 /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E8AE5260DD3B10068CCE5 /* Supplier.swift */; };
+		1F0E8AEC260DDEAB0068CCE5 /* MockSupplierSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E8AEB260DDEAB0068CCE5 /* MockSupplierSnapshot.swift */; };
 		1F2C097926073B41000E690E /* MainTabValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C097826073B41000E690E /* MainTabValidatorTests.swift */; };
 		1F2C097E26073BAB000E690E /* MainTabValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C097D26073BAB000E690E /* MainTabValidator.swift */; };
 		1F2C09832607434E000E690E /* MainTabPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2C09822607434E000E690E /* MainTabPresenterTests.swift */; };
@@ -52,6 +54,8 @@
 		1F6816BE2607EADC006D3C8A /* CustomersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6816BD2607EADC006D3C8A /* CustomersController.swift */; };
 		1F6816C32607EAED006D3C8A /* SuppliersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6816C22607EAED006D3C8A /* SuppliersController.swift */; };
 		1F8408CF260D20B400FEC737 /* ReusableIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8408CE260D20B400FEC737 /* ReusableIdentifiers.swift */; };
+		1F8408D7260DCF9B00FEC737 /* SelectSupplierWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8408D6260DCF9B00FEC737 /* SelectSupplierWebServiceTests.swift */; };
+		1F8408F0260DD0BC00FEC737 /* SelectSupplierWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8408EF260DD0BC00FEC737 /* SelectSupplierWebService.swift */; };
 		1F85A5462603E9AA00307245 /* SignupPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A5452603E9AA00307245 /* SignupPresenterProtocol.swift */; };
 		1F85A54B2603EA5000307245 /* MockSignupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A54A2603EA5000307245 /* MockSignupPresenter.swift */; };
 		1F85A5532604AFA700307245 /* SignupError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F85A5522604AFA700307245 /* SignupError.swift */; };
@@ -118,6 +122,8 @@
 
 /* Begin PBXFileReference section */
 		1006DDE0CFDCED27C834F3BF /* Pods-MiFaenaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiFaenaTests.release.xcconfig"; path = "Target Support Files/Pods-MiFaenaTests/Pods-MiFaenaTests.release.xcconfig"; sourceTree = "<group>"; };
+		1F0E8AE5260DD3B10068CCE5 /* Supplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
+		1F0E8AEB260DDEAB0068CCE5 /* MockSupplierSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSupplierSnapshot.swift; sourceTree = "<group>"; };
 		1F2C097826073B41000E690E /* MainTabValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabValidatorTests.swift; sourceTree = "<group>"; };
 		1F2C097D26073BAB000E690E /* MainTabValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabValidator.swift; sourceTree = "<group>"; };
 		1F2C09822607434E000E690E /* MainTabPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPresenterTests.swift; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 		1F6816BD2607EADC006D3C8A /* CustomersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomersController.swift; sourceTree = "<group>"; };
 		1F6816C22607EAED006D3C8A /* SuppliersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppliersController.swift; sourceTree = "<group>"; };
 		1F8408CE260D20B400FEC737 /* ReusableIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifiers.swift; sourceTree = "<group>"; };
+		1F8408D6260DCF9B00FEC737 /* SelectSupplierWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSupplierWebServiceTests.swift; sourceTree = "<group>"; };
+		1F8408EF260DD0BC00FEC737 /* SelectSupplierWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSupplierWebService.swift; sourceTree = "<group>"; };
 		1F85A5452603E9AA00307245 /* SignupPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPresenterProtocol.swift; sourceTree = "<group>"; };
 		1F85A54A2603EA5000307245 /* MockSignupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignupPresenter.swift; sourceTree = "<group>"; };
 		1F85A5522604AFA700307245 /* SignupError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupError.swift; sourceTree = "<group>"; };
@@ -249,6 +257,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0E8AE4260DD3A50068CCE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E8AE5260DD3B10068CCE5 /* Supplier.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F0E8AEA260DDE8F0068CCE5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E8AEB260DDEAB0068CCE5 /* MockSupplierSnapshot.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		1F3D973E2605F6B900D65153 /* Main Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,7 +328,7 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		1F3D97612606214300D65153 /* Main Tab */ = {
+		1F3D97612606214300D65153 /* Main tab */ = {
 			isa = PBXGroup;
 			children = (
 				1F9599D32607DF6B00C02B2C /* Controller */,
@@ -313,7 +337,7 @@
 				1F3D97682606237700D65153 /* Model */,
 				1F3D97622606215000D65153 /* Network */,
 			);
-			path = "Main Tab";
+			path = "Main tab";
 			sourceTree = "<group>";
 		};
 		1F3D97622606215000D65153 /* Network */ = {
@@ -352,12 +376,12 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		1F4F88A22608107A0069E478 /* SuppliersInvoiceController */ = {
+		1F4F88A22608107A0069E478 /* Suppliers invoice controller */ = {
 			isa = PBXGroup;
 			children = (
 				1F4F88A3260810950069E478 /* Controller */,
 			);
-			path = SuppliersInvoiceController;
+			path = "Suppliers invoice controller";
 			sourceTree = "<group>";
 		};
 		1F4F88A3260810950069E478 /* Controller */ = {
@@ -517,7 +541,7 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
-		1F6816A12607E98D006D3C8A /* SuppliersController */ = {
+		1F6816A12607E98D006D3C8A /* Suppliers controller */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816AA2607EA0D006D3C8A /* Controller */,
@@ -527,39 +551,39 @@
 				1F5A82312608C6D100D90522 /* Model */,
 				1F5A822B2608C5BA00D90522 /* Network */,
 			);
-			path = SuppliersController;
+			path = "Suppliers controller";
 			sourceTree = "<group>";
 		};
-		1F6816A22607E997006D3C8A /* CustomersController */ = {
+		1F6816A22607E997006D3C8A /* Customers controller */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816A92607EA07006D3C8A /* Controller */,
 			);
-			path = CustomersController;
+			path = "Customers controller";
 			sourceTree = "<group>";
 		};
-		1F6816A32607E9BB006D3C8A /* ProductionController */ = {
+		1F6816A32607E9BB006D3C8A /* Production controller */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816A82607EA02006D3C8A /* Controller */,
 			);
-			path = ProductionController;
+			path = "Production controller";
 			sourceTree = "<group>";
 		};
-		1F6816A42607E9D1006D3C8A /* ResultsController */ = {
+		1F6816A42607E9D1006D3C8A /* Results controller */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816A72607E9FC006D3C8A /* Controller */,
 			);
-			path = ResultsController;
+			path = "Results controller";
 			sourceTree = "<group>";
 		};
-		1F6816A52607E9DC006D3C8A /* MiscellaneousController */ = {
+		1F6816A52607E9DC006D3C8A /* Miscellaneous controller */ = {
 			isa = PBXGroup;
 			children = (
 				1F6816A62607E9F4006D3C8A /* Controller */,
 			);
-			path = MiscellaneousController;
+			path = "Miscellaneous controller";
 			sourceTree = "<group>";
 		};
 		1F6816A62607E9F4006D3C8A /* Controller */ = {
@@ -602,6 +626,48 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		1F8408D3260D2C0B00FEC737 /* Add suppliers invoice */ = {
+			isa = PBXGroup;
+			children = (
+				1F8408D4260D2C7200FEC737 /* Add Suppliers Id */,
+			);
+			path = "Add suppliers invoice";
+			sourceTree = "<group>";
+		};
+		1F8408D4260D2C7200FEC737 /* Add Suppliers Id */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E8AEA260DDE8F0068CCE5 /* Mocks */,
+				1F8408D5260DCF1A00FEC737 /* Network */,
+			);
+			path = "Add Suppliers Id";
+			sourceTree = "<group>";
+		};
+		1F8408D5260DCF1A00FEC737 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1F8408D6260DCF9B00FEC737 /* SelectSupplierWebServiceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1F8408DE260DD03300FEC737 /* Select Supplier */ = {
+			isa = PBXGroup;
+			children = (
+				1F0E8AE4260DD3A50068CCE5 /* Model */,
+				1F8408EE260DD09600FEC737 /* Web service */,
+			);
+			path = "Select Supplier";
+			sourceTree = "<group>";
+		};
+		1F8408EE260DD09600FEC737 /* Web service */ = {
+			isa = PBXGroup;
+			children = (
+				1F8408EF260DD0BC00FEC737 /* SelectSupplierWebService.swift */,
+			);
+			path = "Web service";
+			sourceTree = "<group>";
+		};
 		1F9599D32607DF6B00C02B2C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,7 +676,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		1FB5B265260D0B78001BDE72 /* DottedButtonSheet */ = {
+		1FB5B265260D0B78001BDE72 /* Dotted button sheet */ = {
 			isa = PBXGroup;
 			children = (
 				1F52D6A6260BC9B8008A4A9F /* DottedButtonsSheet.swift */,
@@ -618,7 +684,7 @@
 				1FB5B25A260D0B06001BDE72 /* DottedButtonViewModel.swift */,
 				1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */,
 			);
-			path = DottedButtonSheet;
+			path = "Dotted button sheet";
 			sourceTree = "<group>";
 		};
 		1FC08B532604D7FE00631263 /* Sign In */ = {
@@ -703,16 +769,17 @@
 			children = (
 				1FCECF402601387300C06370 /* AppDelegate.swift */,
 				1FCECF422601387300C06370 /* SceneDelegate.swift */,
-				1FB5B265260D0B78001BDE72 /* DottedButtonSheet */,
-				1F4F88A22608107A0069E478 /* SuppliersInvoiceController */,
-				1F6816A52607E9DC006D3C8A /* MiscellaneousController */,
-				1F6816A42607E9D1006D3C8A /* ResultsController */,
-				1F6816A32607E9BB006D3C8A /* ProductionController */,
-				1F6816A22607E997006D3C8A /* CustomersController */,
-				1F6816A12607E98D006D3C8A /* SuppliersController */,
-				1F3D97612606214300D65153 /* Main Tab */,
+				1F8408DE260DD03300FEC737 /* Select Supplier */,
+				1F4F88A22608107A0069E478 /* Suppliers invoice controller */,
+				1F6816A52607E9DC006D3C8A /* Miscellaneous controller */,
+				1F6816A42607E9D1006D3C8A /* Results controller */,
+				1F6816A32607E9BB006D3C8A /* Production controller */,
+				1F6816A22607E997006D3C8A /* Customers controller */,
+				1F6816A12607E98D006D3C8A /* Suppliers controller */,
+				1F3D97612606214300D65153 /* Main tab */,
 				1FE280872604E0AE00005970 /* Signin */,
 				1FEA60A526021F8900654538 /* Signup */,
+				1FB5B265260D0B78001BDE72 /* Dotted button sheet */,
 				1F54F7C826039584005DC60D /* Utilities */,
 				1FCECF492601387600C06370 /* Assets.xcassets */,
 				1FCECF4B2601387600C06370 /* LaunchScreen.storyboard */,
@@ -725,6 +792,7 @@
 		1FCECF5A26013E4300C06370 /* MiFaenaTests */ = {
 			isa = PBXGroup;
 			children = (
+				1F8408D3260D2C0B00FEC737 /* Add suppliers invoice */,
 				1F4F88B52608BE180069E478 /* Suppliers Controller */,
 				1F3D973E2605F6B900D65153 /* Main Tab */,
 				1FC08B532604D7FE00631263 /* Sign In */,
@@ -1181,6 +1249,8 @@
 				1F6816BE2607EADC006D3C8A /* CustomersController.swift in Sources */,
 				1F9599BE26075D2000C02B2C /* MainTabViewDelegateProtocol.swift in Sources */,
 				1FE280CC26051F9900005970 /* SigninViewDelegateProtocol.swift in Sources */,
+				1F0E8AE6260DD3B10068CCE5 /* Supplier.swift in Sources */,
+				1F8408F0260DD0BC00FEC737 /* SelectSupplierWebService.swift in Sources */,
 				1F3D9770260631A400D65153 /* MainTabPresenter.swift in Sources */,
 				1F52D69C260B3C25008A4A9F /* InvoiceSummaryCell.swift in Sources */,
 				1FE280C2260517F000005970 /* SigninWebServiceProtocol.swift in Sources */,
@@ -1212,6 +1282,7 @@
 				1F5A823F2608F42E00D90522 /* SuppliersInvoiceSummariesPresenterTests.swift in Sources */,
 				1F4F88B82608C27E0069E478 /* SuppliersInvoiceSummariesWebServiceTests.swift in Sources */,
 				1FE2809A2604F0B200005970 /* SigninWebServiceTests.swift in Sources */,
+				1F0E8AEC260DDEAB0068CCE5 /* MockSupplierSnapshot.swift in Sources */,
 				1FE280B22605065000005970 /* SigninPresenterTests.swift in Sources */,
 				1F9599E02607E03700C02B2C /* MainTabBarControllerTests.swift in Sources */,
 				1FED6053260A64580053B489 /* MockSnapshot.swift in Sources */,
@@ -1239,6 +1310,7 @@
 				1F85A54B2603EA5000307245 /* MockSignupPresenter.swift in Sources */,
 				1FE280C726051E9100005970 /* MockSigninViewDelegate.swift in Sources */,
 				1F5A8274260910AC00D90522 /* SuppliersControllerTests.swift in Sources */,
+				1F8408D7260DCF9B00FEC737 /* SelectSupplierWebServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
