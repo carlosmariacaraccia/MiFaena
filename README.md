@@ -13,7 +13,6 @@
       <img src="https://github.com/carlosmariacaraccia/MiFaena/blob/master/MiFaena/Readme%20Images/selectSupplier.png" width=200 />
       <img src="https://github.com/carlosmariacaraccia/MiFaena/blob/master/MiFaena/Readme%20Images/filterSupplier.png" width=200 />
       <img src="https://github.com/carlosmariacaraccia/MiFaena/blob/master/MiFaena/Readme%20Images/invoiceDate.png" width=200 />
-      <img src = "https://github.com/carlosmariacaraccia/MiFaena/blob/master/MiFaena/Readme%20Images/invoiceDate.png" width=200 />
       <img src = "https://github.com/carlosmariacaraccia/MiFaena/blob/master/MiFaena/Readme%20Images/suppliersInvoice.png" width=200 />
     </p>
   </div>
