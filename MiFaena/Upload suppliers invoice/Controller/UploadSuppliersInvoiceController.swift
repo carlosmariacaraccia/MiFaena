@@ -197,6 +197,11 @@ extension UploadSuppliersInvoiceController {
             let controller = SuppliersInvoiceDatesViewController(suppliersInvoiceDateValidation: datesValidationService)
             controller.delegate = self
             navigationController?.pushViewController(controller, animated: true)
+        case .items:
+            let layout = UICollectionViewFlowLayout()
+            let controller = SuppliersInvoiceItemsController(collectionViewLayout: layout)
+            navigationController?.pushViewController(controller, animated: true)
+            
         default:
             print("Default")
         }

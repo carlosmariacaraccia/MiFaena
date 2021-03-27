@@ -144,3 +144,8 @@ class InputInvoiceNumberViewController:UIViewController {
         return
     }
 }
+
+
+// TODO: Add an Utils.inputcontainer view to show the text field with a line beneath it.
+// TODO: Implement a presenter architechture to remove the logic from the view controller and test it.
+

@@ -20,7 +20,7 @@ class MainTabControllerWebServiceTests: XCTestCase {
 
     func testMainTabWebService_WhenGivenAValidUserId_ReturnsANotNilUser() {
         let sut = MainTabWebService()
-        let userId = "61eucxcF6HaylMBStyhwqAF8Sah1"
+        let userId = "qmbpCe9yGwZ6SbuAqzPTDqchSGq1"
         
         let myExpectation = expectation(description: "A not nil user is returned from the server.")
         sut.fetchUser(withId:userId) { user in

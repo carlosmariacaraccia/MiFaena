@@ -88,7 +88,7 @@ class MainTabBarControllerTests: XCTestCase {
         let exp = expectation(description: "Test after 1.5 second wait")
         let result = XCTWaiter.wait(for: [exp], timeout: 1.5)
         if result == XCTWaiter.Result.timedOut {
-            XCTAssertNotNil(navCon.visibleViewController is SuppliersInvoiceController)
+            XCTAssertNotNil(navCon.visibleViewController is UploadSuppliersInvoiceController)
         } else {
             XCTFail("Delay interrupted")
         }
