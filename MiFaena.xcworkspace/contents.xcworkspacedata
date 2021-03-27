@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MiFaena/../README.md">
+   </FileRef>
+   <FileRef
       location = "group:MiFaena.xcodeproj">
    </FileRef>
    <FileRef

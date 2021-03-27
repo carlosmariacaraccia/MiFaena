@@ -78,6 +78,7 @@
 		1FC09776260F011E003EB536 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FC0976E260F011E003EB536 /* login.png */; };
 		1FC09777260F011E003EB536 /* selectSupplier.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FC0976F260F011E003EB536 /* selectSupplier.png */; };
 		1FC09778260F011E003EB536 /* suppliersInvoice.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FC09770260F011E003EB536 /* suppliersInvoice.png */; };
+		1FC0977D260F0380003EB536 /* README copy.md in Resources */ = {isa = PBXBuildFile; fileRef = 1FC0977C260F0380003EB536 /* README copy.md */; };
 		1FCECF412601387300C06370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCECF402601387300C06370 /* AppDelegate.swift */; };
 		1FCECF432601387300C06370 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCECF422601387300C06370 /* SceneDelegate.swift */; };
 		1FCECF4A2601387600C06370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCECF492601387600C06370 /* Assets.xcassets */; };
@@ -205,7 +206,7 @@
 		1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetCell.swift; sourceTree = "<group>"; };
 		1FB5B25A260D0B06001BDE72 /* DottedButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonViewModel.swift; sourceTree = "<group>"; };
 		1FB5B25F260D0B42001BDE72 /* DottedButtonSheetOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetOptions.swift; sourceTree = "<group>"; };
-		1FC0975B260EFCDE003EB536 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1FC0975B260EFCDE003EB536 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1FC09769260F011D003EB536 /* mainTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainTab.png; sourceTree = "<group>"; };
 		1FC0976A260F011D003EB536 /* filterSupplier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filterSupplier.png; sourceTree = "<group>"; };
 		1FC0976B260F011D003EB536 /* invoiceDate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invoiceDate.png; sourceTree = "<group>"; };
@@ -214,6 +215,7 @@
 		1FC0976E260F011E003EB536 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		1FC0976F260F011E003EB536 /* selectSupplier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectSupplier.png; sourceTree = "<group>"; };
 		1FC09770260F011E003EB536 /* suppliersInvoice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suppliersInvoice.png; sourceTree = "<group>"; };
+		1FC0977C260F0380003EB536 /* README copy.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "README copy.md"; sourceTree = "<group>"; };
 		1FCECF3D2601387300C06370 /* MiFaena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiFaena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCECF402601387300C06370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCECF422601387300C06370 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -811,6 +813,7 @@
 		1FCECF342601387300C06370 = {
 			isa = PBXGroup;
 			children = (
+				1FC0977C260F0380003EB536 /* README copy.md */,
 				1FCECF3F2601387300C06370 /* MiFaena */,
 				1FCECF5A26013E4300C06370 /* MiFaenaTests */,
 				1FCECF6A26013E4D00C06370 /* MiFaenaUITests */,
@@ -1186,6 +1189,7 @@
 				1FC09775260F011E003EB536 /* inoviceNumber.png in Resources */,
 				1FC09777260F011E003EB536 /* selectSupplier.png in Resources */,
 				1FC09776260F011E003EB536 /* login.png in Resources */,
+				1FC0977D260F0380003EB536 /* README copy.md in Resources */,
 				1FCECF7A2601403E00C06370 /* GoogleService-Info.plist in Resources */,
 				1FCECF4D2601387600C06370 /* LaunchScreen.storyboard in Resources */,
 				1FC09773260F011E003EB536 /* invoiceDate.png in Resources */,
