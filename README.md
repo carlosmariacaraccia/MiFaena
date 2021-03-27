@@ -20,7 +20,7 @@
 
 ### Packages used: Firebase, SDWebImge, CSV
 
-Simple app to manage a slaughter business.
+Simple app to manage a slaughter business. Unfortunatelly, this is almost the only part of the app I can show, because the bigger one is property of Meat Trade.
 About 60 % of the code is tested.
 
 
