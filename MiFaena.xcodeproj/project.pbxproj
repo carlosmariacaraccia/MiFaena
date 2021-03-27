@@ -197,6 +197,7 @@
 		1FB5B24F260CBE12001BDE72 /* DottedButtonSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetCell.swift; sourceTree = "<group>"; };
 		1FB5B25A260D0B06001BDE72 /* DottedButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonViewModel.swift; sourceTree = "<group>"; };
 		1FB5B25F260D0B42001BDE72 /* DottedButtonSheetOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DottedButtonSheetOptions.swift; sourceTree = "<group>"; };
+		1FC0975B260EFCDE003EB536 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1FCECF3D2601387300C06370 /* MiFaena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiFaena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCECF402601387300C06370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FCECF422601387300C06370 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -776,6 +777,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		1FC0975F260EFFBC003EB536 /* Readme Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Readme Images";
+			sourceTree = "<group>";
+		};
 		1FCECF342601387300C06370 = {
 			isa = PBXGroup;
 			children = (
@@ -803,6 +811,7 @@
 			children = (
 				1FCECF402601387300C06370 /* AppDelegate.swift */,
 				1FCECF422601387300C06370 /* SceneDelegate.swift */,
+				1FC0975F260EFFBC003EB536 /* Readme Images */,
 				1F8408DE260DD03300FEC737 /* Select Supplier */,
 				1F4F88A22608107A0069E478 /* Suppliers invoice controller */,
 				1F6816A52607E9DC006D3C8A /* Miscellaneous controller */,
@@ -818,6 +827,7 @@
 				1FCECF492601387600C06370 /* Assets.xcassets */,
 				1FCECF4B2601387600C06370 /* LaunchScreen.storyboard */,
 				1FCECF792601403E00C06370 /* GoogleService-Info.plist */,
+				1FC0975B260EFCDE003EB536 /* README.md */,
 				1FCECF4E2601387600C06370 /* Info.plist */,
 			);
 			path = MiFaena;
